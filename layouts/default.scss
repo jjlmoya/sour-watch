@@ -1,0 +1,44 @@
+$l-layout-sidebar: 150px;
+
+.l-default {
+  display: grid;
+  position: relative;
+  height: 100vh;
+
+  &__background {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    height: 25vh;
+    background-size: cover;
+
+    &--1 {
+      top: 25vh;
+      background-color: #dbdbdb;
+    }
+
+    &--2 {
+      top: 50vh;
+      background-color: #8a8a8a;
+    }
+
+    &--3 {
+      top: 75vh;
+      background-color: #5f5a5b;
+    }
+  }
+
+  &__main {
+    display: grid;
+    grid-template-columns: auto;
+  }
+
+  &__element--full {
+    width: calc(100% + 150px + 150px);
+    margin-left: -150px;
+  }
+}
