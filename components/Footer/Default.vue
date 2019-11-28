@@ -1,6 +1,5 @@
 <template>
     <footer class="footer-default">
-        <BreadCrumbs/>
     </footer>
 </template>
 

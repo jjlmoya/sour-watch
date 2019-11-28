@@ -1,35 +1,53 @@
 .header {
   &--default {
-    position: fixed;
     width: 100%;
-    display: flex;
-    justify-content: center;
+    max-height: 50px;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: white;
 
     .header {
       &__logo {
-        img {
-          width: 200px;
+        margin: 0 auto;
+
+        .image {
+          max-height: 40px;
         }
       }
 
-      &__nav {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
+      &__contact {
+        display: grid;
+        grid-template-columns: 50px 1fr;
+        margin: 0 auto;
 
-        &__item {
-          width: 98px;
-          list-style-type: none;
-          border-right: 1px solid #252525;
+        .phone {
+          display: grid;
+          align-items: end;
+          font-weight: bold;
+        }
 
-          &__link {
-            color: #fff;
-            text-transform: uppercase;
-            font-weight: bold;
-            font-size: 0.8rem;
-            letter-spacing: 1px;
-          }
+        .icon {
+          align-self: center;
+          grid-row: span 2 / 1;
+        }
+
+        .time {
+          font-weight: lighter;
+          font-size: 0.7rem;
+          color: #777;
+        }
+      }
+
+      &__searcher {
+        max-width: 200px;
+        margin: 0 auto;
+        padding: 5px 10px;
+        text-transform: capitalize;
+
+        &:hover,
+        &:focus {
+          border-color: rgba(black, 0.3);
         }
       }
     }
