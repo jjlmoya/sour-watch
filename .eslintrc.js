@@ -9,8 +9,8 @@ module.exports = {
     },
     extends: [
         '@nuxtjs',
-        'plugin:nuxt/recommended',
         'standard',
+        'plugin:nuxt/recommended',
         'plugin:vue/recommended'
     ],
     // add your custom rules here
@@ -22,17 +22,17 @@ module.exports = {
             closeBracket: 0,
             alignAttributesVertically: true
         }],
-        'vue/script-indent': ['error', 4, {
+        'vue/script-indent': ['warning', 4, {
             baseIndent: 1
         }],
-        'vue/html-self-closing': ['error', {
+        'vue/html-self-closing': ['warning', {
             html: {
                 void: 'never',
                 normal: 'any',
                 component: 'always'
             }
         }],
-        'vue/max-attributes-per-line': ['error', {
+        'vue/max-attributes-per-line': ['warning', {
             singleline: 4,
             multiline: {
                 max: 1,

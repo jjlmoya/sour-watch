@@ -1,24 +1,33 @@
 <template>
     <div class="home">
-        <Layout />
+        <Layout>
+            <Slider/>
+        </Layout>
     </div>
 </template>
 
 <script>
-    import SeoService from '../services/seoService'
     import Layout from '@/layouts/Default.vue'
+    import Slider from '@/components/Slider/Default.vue'
 
     export default {
         name: 'Home',
         components: {
-            Layout
+            Layout,
+            Slider
         },
-        metaInfo () {
-            const seoService = new SeoService({
+        head () {
+            return {
                 title: 'Vostok Europa',
-                description: 'Tus soluciones de telecomunicación, sonido, electricidad e imagen'
-            })
-            return seoService.getMetas()
+                meta: [
+                    // hid is used as unique identifier. Do not use `vmid` for it as it will not work
+                    {
+                        hid: 'description',
+                        name: 'description',
+                        content: 'My custom description'
+                    }
+                ]
+            }
         }
     }
 </script>
