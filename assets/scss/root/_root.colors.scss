@@ -1,13 +1,83 @@
 @mixin root-colors {
-  --color-primary-hue: 153;
-  --color-primary-saturation: 48%;
-  --color-primary-lumnosity: 46%;
+  --color-primary-hue: 353;
+  --color-primary-saturation: 72%;
+  --color-primary-lumnosity: 23%;
   --color-primary-hsl: var(--color-primary-hue), var(--color-primary-saturation), var(--color-primary-lumnosity);
   --color-primary: hsl(var(--color-primary-hsl));
+  //
+  --color-primary-light-hue: 359;
+  --color-primary-light-saturation: 63%;
+  --color-primary-light-lumnosity: 44%;
+  --color-primary-light-hsl: var(--color-primary-light-hue), var(--color-primary-light-saturation), var(--color-primary-light-lumnosity);
+  --color-primary-light: hsl(var(--color-primary-light-hsl));
+  //
+  --color-secondary-hue: 11;
+  --color-secondary-saturation: 88%;
+  --color-secondary-lumnosity: 62%;
+  --color-secondary-hsl: var(--color-secondary-hue), var(--color-secondary-saturation), var(--color-secondary-lumnosity);
+  --color-secondary: hsl(var(--color-secondary-hsl));
+  //
+  --color-secondary-light-hue: 40;
+  --color-secondary-light-saturation: 86%;
+  --color-secondary-light-lumnosity: 55%;
+  --color-secondary-light-hsl: var(--color-secondary-light-hue), var(--color-secondary-light-saturation), var(--color-secondary-light-lumnosity);
+  --color-secondary-light: hsl(var(--color-secondary-light-hsl));
+  //
+  --color-accent-hue: 34;
+  --color-accent-saturation: 31%;
+  --color-accent-lumnosity: 66%;
+  --color-accent-hsl: var(--color-accent-hue), var(--color-accent-saturation), var(--color-accent-lumnosity);
+  --color-accent: hsl(var(--color-accent-hsl));
 
   // Grery colors
   @for $i from 0 through 20 {
     --color-shade-#{$i * 100}-hsl: 0, 0%, #{100 - ($i * 5)}#{'%'};
     --color-shade-#{$i * 100}: #{'hsl(var(--color-shade-#{$i * 100}-hsl))'};
   }
+}
+
+.test2 {
+  --color-primary-hue: 36;
+  --color-primary-saturation: 72%;
+  --color-primary-lumnosity: 23%;
+  --color-primary-hsl: var(--color-primary-hue), var(--color-primary-saturation), var(--color-primary-lumnosity);
+  --color-primary: hsl(var(--color-primary-hsl));
+  //
+  --color-primary-light-hue: 25;
+  --color-primary-light-saturation: 63%;
+  --color-primary-light-lumnosity: 44%;
+  --color-primary-light-hsl: var(--color-primary-light-hue), var(--color-primary-light-saturation), var(--color-primary-light-lumnosity);
+  --color-primary-light: hsl(var(--color-primary-light-hsl));
+  //
+  --color-secondary-hue: 30;
+  --color-secondary-saturation: 88%;
+  --color-secondary-lumnosity: 62%;
+  --color-secondary-hsl: var(--color-secondary-hue), var(--color-secondary-saturation), var(--color-secondary-lumnosity);
+  --color-secondary: hsl(var(--color-secondary-hsl));
+  //
+  --color-secondary-light-hue: 45;
+  --color-secondary-light-saturation: 86%;
+  --color-secondary-light-lumnosity: 55%;
+  --color-secondary-light-hsl: var(--color-secondary-light-hue), var(--color-secondary-light-saturation), var(--color-secondary-light-lumnosity);
+  --color-secondary-light: hsl(var(--color-secondary-light-hsl));
+  //
+  --color-accent-hue: 160;
+  --color-accent-saturation: 31%;
+  --color-accent-lumnosity: 66%;
+  --color-accent-hsl: var(--color-accent-hue), var(--color-accent-saturation), var(--color-accent-lumnosity);
+  --color-accent: hsl(var(--color-accent-hsl));
+}
+
+.test3 {
+  $primary-color: #f2d062;
+  $primary-color-light: #da5a41;
+  $secondary-color: #4f1e31;
+  $secondary-color-light: #91342d;
+  $light-color: #597c80;
+
+  --color-primary: $primary-color;
+  --color-primary-light: $primary-color-light;
+  --color-secondary: $secondary-color;
+  --color-secondary-light: $secondary-color-light;
+  --color-accent: $accent-color;
 }

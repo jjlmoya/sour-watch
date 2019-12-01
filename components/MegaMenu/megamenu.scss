@@ -2,7 +2,7 @@
   height: 50px;
 
   &--default {
-    background-color: #ffe8e8;
+    background-color: var(--color-accent);
     padding: 0 20px;
     display: flex;
     justify-content: flex-start;

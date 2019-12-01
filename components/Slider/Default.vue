@@ -15,8 +15,7 @@
             </span>
         </div>
         <ul class="slider__dots">
-            <li
-                v-for="(dot, index) in slides"
+            <li v-for="(dot, index) in slides"
                 :key="index"
                 class="dot"
                 :class="{ active: isDotActive(index)}"

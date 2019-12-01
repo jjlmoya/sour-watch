@@ -22,17 +22,17 @@ module.exports = {
             closeBracket: 0,
             alignAttributesVertically: true
         }],
-        'vue/script-indent': ['warning', 4, {
+        'vue/script-indent': ['error', 4, {
             baseIndent: 1
         }],
-        'vue/html-self-closing': ['warning', {
+        'vue/html-self-closing': ['error', {
             html: {
                 void: 'never',
                 normal: 'any',
                 component: 'always'
             }
         }],
-        'vue/max-attributes-per-line': ['warning', {
+        'vue/max-attributes-per-line': ['error', {
             singleline: 4,
             multiline: {
                 max: 1,

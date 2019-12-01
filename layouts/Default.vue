@@ -16,14 +16,14 @@
 <style lang="scss">@import 'default.scss';
 </style>
 <script>
-    import HeaderDefault from '@/components/Header/Default.vue'
-    import MegaMenu from '@/components/MegaMenu/Default.vue'
+  import HeaderDefault from '@/components/Header/Default.vue'
+  import MegaMenu from '@/components/MegaMenu/Default.vue'
 
-    export default {
-        name: 'default-layout',
-        components: {
-            HeaderDefault,
-            MegaMenu
-        }
+  export default {
+    name: 'default-layout',
+    components: {
+      HeaderDefault,
+      MegaMenu
     }
+  }
 </script>
