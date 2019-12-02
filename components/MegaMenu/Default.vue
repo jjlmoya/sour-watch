@@ -1,6 +1,6 @@
 <template>
     <nav class="megamenu megamenu--default">
-        <div v-for="collection in collections" v-bind:key="collection" class="megamenu__element">
+        <div v-for="collection in collections" :key="collection" class="megamenu__element">
             <a href="#">{{ collection }}</a>
         </div>
     </nav>

@@ -67,17 +67,3 @@
   --color-accent-hsl: var(--color-accent-hue), var(--color-accent-saturation), var(--color-accent-lumnosity);
   --color-accent: hsl(var(--color-accent-hsl));
 }
-
-.test3 {
-  $primary-color: #f2d062;
-  $primary-color-light: #da5a41;
-  $secondary-color: #4f1e31;
-  $secondary-color-light: #91342d;
-  $light-color: #597c80;
-
-  --color-primary: $primary-color;
-  --color-primary-light: $primary-color-light;
-  --color-secondary: $secondary-color;
-  --color-secondary-light: $secondary-color-light;
-  --color-accent: $accent-color;
-}
