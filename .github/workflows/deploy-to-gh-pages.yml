@@ -14,4 +14,4 @@ jobs:
         BASE_BRANCH: master
         BRANCH: gh-pages
         FOLDER: dist
-        BUILD_SCRIPT: npm install && npm run-script generate
+        BUILD_SCRIPT: yarn install && yarn run-script generate
