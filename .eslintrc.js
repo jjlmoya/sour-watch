@@ -14,7 +14,7 @@ module.exports = {
         'plugin:vue/recommended'
     ],
     // add your custom rules here
-    rules: {
+    rules: {/*
         indent: ['error', 4],
         'vue/html-indent': ['error', 4, {
             attribute: 1,
@@ -38,7 +38,7 @@ module.exports = {
                 max: 1,
                 allowFirstLine: false
             }
-        }]
+        }]*/
     },
     overrides: [{
         files: ['*.vue'],
