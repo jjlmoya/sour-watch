@@ -1,18 +1,75 @@
 .header {
   &--default {
     width: 100%;
-    max-height: 50px;
-    display: grid;
-    align-items: center;
-    grid-template-columns: 1fr 1fr 1fr;
+    height: 50px;
     background-color: #fff8f8;
+
+    .header--desktop {
+      display: none;
+    }
+
+    .header--mobile {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+
+      &__toggle {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        margin: 20px;
+        background-color: var(--color-accent);
+        width: 10px;
+        height: 10px;
+        padding: 20px;
+        border-radius: 50%;
+        color: white;
+        z-index: 1000;
+      }
+
+      &__options {
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: white;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 100vh;
+        width: 100vw;
+        z-index: 100;
+        transform: translateX(100%);
+        will-change: translate;
+        transition: all 0.5s linear;
+        padding: 20px;
+
+        &.is-active {
+          transform: translateX(0);
+        }
+      }
+    }
+
+    @include breakpoint(s) {
+      .header--desktop {
+        display: grid;
+        align-items: center;
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+
+      .header--mobile {
+        display: none;
+      }
+    }
 
     .header {
       &__logo {
         margin: 0 auto;
 
         .image {
-          max-height: 40px;
+          max-height: 50px;
+          padding: 5px;
         }
       }
 
@@ -44,6 +101,7 @@
         display: flex;
         align-items: flex-start;
         position: relative;
+        margin: 10px;
 
         .icon {
           position: absolute;
@@ -58,10 +116,11 @@
           margin: 0 auto;
           padding: 5px 10px;
           text-transform: capitalize;
+          border-color: rgba(black, 0.2);
 
           &:hover,
           &:focus {
-            border-color: rgba(black, 0.3);
+            border-color: rgba(black, 0.6);
           }
         }
       }
