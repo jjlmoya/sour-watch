@@ -1,7 +1,9 @@
 <template>
-    <div class="logo" :class="modifier">
-        <img class="image" src="VostokEuropeLogo.png" alt="Vostok Europe">
-    </div>
+    <router-link to="/">
+        <div class="logo" :class="modifier">
+            <img class="image" src="/VostokEuropeLogo.png" alt="Vostok Europe">
+        </div>
+    </router-link>
 </template>
 
 <script>
