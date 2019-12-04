@@ -32,8 +32,8 @@
                         slug: 'ekranoplan'
                     },
                     {
-                        name: 'Энергия-2',
-                        slug: 'energy-2'
+                        name: 'Энергия',
+                        slug: 'energy'
                     },
                     {
                         name: 'Луноход-2',
@@ -48,7 +48,7 @@
                         slug: 'anchar'
                     },
                     {
-                        name: 'ГАЗ-14 Лимузин',
+                        name: 'Лимузин',
                         slug: 'gaz-14-limusin'
                     },
                     {
@@ -56,8 +56,8 @@
                         slug: 'raketa-n1'
                     },
                     {
-                        name: 'Экспедиция-2',
-                        slug: 'expedition-2'
+                        name: 'Экспедиция',
+                        slug: 'expedition'
                     }
                 ]
             }

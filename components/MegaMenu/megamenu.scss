@@ -16,7 +16,13 @@
     font-size: 12px;
     text-transform: uppercase;
     opacity: 0.6;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    white-space: nowrap;
+    padding-right: 5px;
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
 
     &:hover,
     &:focus {

@@ -1,7 +1,7 @@
 <template>
     <div class="home">
         <Layout>
-            {{ this.id }}
+            {{ id }}
         </Layout>
     </div>
 </template>

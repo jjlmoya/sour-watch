@@ -1,0 +1,211 @@
+export const watches = [
+    {
+        image: 'https://www.vostok-europe.com/wp-content/uploads/2017/02/Expedition-Leather-298-450x576.png',
+        collection: 'ЭКСПЕДИЦИЯ',
+        brand: '',
+        model: '6s21-595h298',
+        price: '29.580 руб.',
+        url: 'https://www.vostok-europe.com/6s21-595h298/',
+        available: true,
+        isNew: true,
+        hasOffer: true
+    },
+    {
+        image: 'https://www.vostok-europe.com/wp-content/uploads/2017/02/Expedition-Leather-298-450x576.png',
+        collection: 'ЭКСПЕДИЦИЯ',
+        brand: 'Vostok Europe',
+        model: '6s21-595h298',
+        price: '29.580 руб.',
+        url: 'https://www.vostok-europe.com/6s21-595h298/',
+        available: true,
+        isNew: true,
+        hasOffer: true
+    },
+    {
+        image: 'https://www.vostok-europe.com/wp-content/uploads/2017/02/Expedition-Leather-298-450x576.png',
+        collection: 'ЭКСПЕДИЦИЯ',
+        brand: '',
+        model: '6s21-595h298',
+        price: '29.580 руб.',
+        url: 'https://www.vostok-europe.com/6s21-595h298/',
+        available: true,
+        isNew: true,
+        hasOffer: true
+    },
+    {
+        image: 'https://www.vostok-europe.com/wp-content/uploads/2017/02/Expedition-Leather-298-450x576.png',
+        collection: 'ЭКСПЕДИЦИЯ',
+        brand: '',
+        model: '6s21-595h298',
+        price: '29.580 руб.',
+        url: 'https://www.vostok-europe.com/6s21-595h298/',
+        available: true,
+        isNew: true,
+        hasOffer: true
+    },
+    {
+        image: 'https://www.vostok-europe.com/wp-content/uploads/2017/02/Expedition-Leather-298-450x576.png',
+        collection: 'ЭКСПЕДИЦИЯ',
+        brand: '',
+        model: '6s21-595h298',
+        price: '29.580 руб.',
+        url: 'https://www.vostok-europe.com/6s21-595h298/',
+        available: true,
+        isNew: true,
+        hasOffer: true
+    },
+    {
+        image: 'https://www.vostok-europe.com/wp-content/uploads/2017/02/Expedition-Leather-298-450x576.png',
+        collection: 'ЭКСПЕДИЦИЯ',
+        brand: '',
+        model: '6s21-595h298',
+        price: '29.580 руб.',
+        url: 'https://www.vostok-europe.com/6s21-595h298/',
+        available: true,
+        isNew: true,
+        hasOffer: true
+    },
+    {
+        image: 'https://www.vostok-europe.com/wp-content/uploads/2017/02/Expedition-Leather-298-450x576.png',
+        collection: 'ЭКСПЕДИЦИЯ',
+        brand: '',
+        model: '6s21-595h298',
+        price: '29.580 руб.',
+        url: 'https://www.vostok-europe.com/6s21-595h298/',
+        available: true,
+        isNew: true,
+        hasOffer: true
+    },
+    {
+        image: 'https://www.vostok-europe.com/wp-content/uploads/2017/02/Expedition-Leather-298-450x576.png',
+        collection: 'ЭКСПЕДИЦИЯ',
+        brand: '',
+        model: '6s21-595h298',
+        price: '29.580 руб.',
+        url: 'https://www.vostok-europe.com/6s21-595h298/',
+        available: true,
+        isNew: true,
+        hasOffer: true
+    },
+    {
+        image: 'https://www.vostok-europe.com/wp-content/uploads/2017/02/Expedition-Leather-298-450x576.png',
+        collection: 'ЭКСПЕДИЦИЯ',
+        brand: '',
+        model: '6s21-595h298',
+        price: '29.580 руб.',
+        url: 'https://www.vostok-europe.com/6s21-595h298/',
+        available: true,
+        isNew: true,
+        hasOffer: true
+    },
+    {
+        image: 'https://www.vostok-europe.com/wp-content/uploads/2017/02/Expedition-Leather-298-450x576.png',
+        collection: 'ЭКСПЕДИЦИЯ',
+        brand: '',
+        model: '6s21-595h298',
+        price: '29.580 руб.',
+        url: 'https://www.vostok-europe.com/6s21-595h298/',
+        available: true,
+        isNew: true,
+        hasOffer: true
+    },
+    {
+        image: 'https://www.vostok-europe.com/wp-content/uploads/2017/02/Expedition-Leather-298-450x576.png',
+        collection: 'ЭКСПЕДИЦИЯ',
+        brand: '',
+        model: '6s21-595h298',
+        price: '29.580 руб.',
+        url: 'https://www.vostok-europe.com/6s21-595h298/',
+        available: true,
+        isNew: true,
+        hasOffer: true
+    },
+    {
+        image: 'https://www.vostok-europe.com/wp-content/uploads/2017/02/Expedition-Leather-298-450x576.png',
+        collection: 'ЭКСПЕДИЦИЯ',
+        brand: '',
+        model: '6s21-595h298',
+        price: '29.580 руб.',
+        url: 'https://www.vostok-europe.com/6s21-595h298/',
+        available: true,
+        isNew: true,
+        hasOffer: true
+    },
+    {
+        image: 'https://www.vostok-europe.com/wp-content/uploads/2017/02/Expedition-Leather-298-450x576.png',
+        collection: 'ЭКСПЕДИЦИЯ',
+        brand: '',
+        model: '6s21-595h298',
+        price: '29.580 руб.',
+        url: 'https://www.vostok-europe.com/6s21-595h298/',
+        available: true,
+        isNew: true,
+        hasOffer: true
+    },
+    {
+        image: 'https://www.vostok-europe.com/wp-content/uploads/2017/02/Expedition-Leather-298-450x576.png',
+        collection: 'ЭКСПЕДИЦИЯ',
+        brand: '',
+        model: '6s21-595h298',
+        price: '29.580 руб.',
+        url: 'https://www.vostok-europe.com/6s21-595h298/',
+        available: true,
+        isNew: true,
+        hasOffer: true
+    },
+    {
+        image: 'https://www.vostok-europe.com/wp-content/uploads/2017/02/Expedition-Leather-298-450x576.png',
+        collection: 'ЭКСПЕДИЦИЯ',
+        brand: '',
+        model: '6s21-595h298',
+        price: '29.580 руб.',
+        url: 'https://www.vostok-europe.com/6s21-595h298/',
+        available: true,
+        isNew: true,
+        hasOffer: true
+    },
+    {
+        image: 'https://www.vostok-europe.com/wp-content/uploads/2017/02/Expedition-Leather-298-450x576.png',
+        collection: 'ЭКСПЕДИЦИЯ',
+        brand: '',
+        model: '6s21-595h298',
+        price: '29.580 руб.',
+        url: 'https://www.vostok-europe.com/6s21-595h298/',
+        available: true,
+        isNew: true,
+        hasOffer: true
+    },
+    {
+        image: 'https://www.vostok-europe.com/wp-content/uploads/2017/02/Expedition-Leather-298-450x576.png',
+        collection: 'ЭКСПЕДИЦИЯ',
+        brand: '',
+        model: '6s21-595h298',
+        price: '29.580 руб.',
+        url: 'https://www.vostok-europe.com/6s21-595h298/',
+        available: true,
+        isNew: true,
+        hasOffer: true
+    },
+    {
+        image: 'https://www.vostok-europe.com/wp-content/uploads/2017/02/Expedition-Leather-298-450x576.png',
+        collection: 'ЭКСПЕДИЦИЯ',
+        brand: '',
+        model: '6s21-595h298',
+        price: '29.580 руб.',
+        url: 'https://www.vostok-europe.com/6s21-595h298/',
+        available: true,
+        isNew: true,
+        hasOffer: true
+    },
+    {
+        image: 'https://www.vostok-europe.com/wp-content/uploads/2017/02/Expedition-Leather-298-450x576.png',
+        collection: 'ЭКСПЕДИЦИЯ',
+        brand: '',
+        model: '6s21-595h298',
+        price: '29.580 руб.',
+        url: 'https://www.vostok-europe.com/6s21-595h298/',
+        available: true,
+        isNew: true,
+        hasOffer: true
+    }
+]

@@ -33,7 +33,6 @@
 
     &__title {
       padding-bottom: 10px;
-      text-decoration: underline;
     }
 
     &__brand {
@@ -45,6 +44,7 @@
     &__model {
       padding-bottom: 10px;
       font-size: 0.8rem;
+      text-transform: uppercase;
     }
 
     &__price {
