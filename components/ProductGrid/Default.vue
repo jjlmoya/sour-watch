@@ -14,7 +14,7 @@
             <div class="product-grid__element__price">
                 {{ product.price }}
             </div>
-            <a class="product-grid__element__button" :href="product.url">{{buy}}</a>
+            <a class="product-grid__element__button" :href="product.url">{{ buy }}</a>
         </div>
     </nav>
 </template>
@@ -23,143 +23,143 @@
 </style>
 
 <script>
-  import { business } from '@/data/literals'
+    import { business } from '@/data/literals'
 
-  export default {
-    name: 'ProductGrid',
-    computed: {
-      buy: () => business.buy,
-      products: () => [{
-        image: 'https://dawos.ru/20300-home_default/26498-SUOK713-SWATCH-POLAWHITE.jpg',
-        name: 'SWATCH POLAWHITE',
-        brand: 'Swatch',
-        model: 'SUOK713',
-        price: '4 700 руб.',
-        url: 'https://www.google.es',
-        available: true,
-        isNew: true,
-        hasOffer: true
-      }, {
-        image: 'https://dawos.ru/20300-home_default/26498-SUOK713-SWATCH-POLAWHITE.jpg',
-        name: 'SWATCH POLAWHITE',
-        brand: 'Swatch',
-        model: 'SUOK713',
-        price: '4 700 руб.',
-        url: 'https://www.google.es',
-        available: true,
-        isNew: true,
-        hasOffer: true
-      }, {
-        image: 'https://dawos.ru/20300-home_default/26498-SUOK713-SWATCH-POLAWHITE.jpg',
-        name: 'SWATCH POLAWHITE',
-        brand: 'Swatch',
-        model: 'SUOK713',
-        price: '4 700 руб.',
-        url: 'https://www.google.es',
-        available: true,
-        isNew: true,
-        hasOffer: true
-      }, {
-        image: 'https://dawos.ru/20300-home_default/26498-SUOK713-SWATCH-POLAWHITE.jpg',
-        name: 'SWATCH POLAWHITE',
-        brand: 'Swatch',
-        model: 'SUOK713',
-        price: '4 700 руб.',
-        url: 'https://www.google.es',
-        available: true,
-        isNew: true,
-        hasOffer: true
-      }, {
-        image: 'https://dawos.ru/20300-home_default/26498-SUOK713-SWATCH-POLAWHITE.jpg',
-        name: 'SWATCH POLAWHITE',
-        brand: 'Swatch',
-        model: 'SUOK713',
-        price: '4 700 руб.',
-        url: 'https://www.google.es',
-        available: true,
-        isNew: true,
-        hasOffer: true
-      }, {
-        image: 'https://dawos.ru/20300-home_default/26498-SUOK713-SWATCH-POLAWHITE.jpg',
-        name: 'SWATCH POLAWHITE',
-        brand: 'Swatch',
-        model: 'SUOK713',
-        price: '4 700 руб.',
-        url: 'https://www.google.es',
-        available: true,
-        isNew: true,
-        hasOffer: true
-      }, {
-        image: 'https://dawos.ru/20300-home_default/26498-SUOK713-SWATCH-POLAWHITE.jpg',
-        name: 'SWATCH POLAWHITE',
-        brand: 'Swatch',
-        model: 'SUOK713',
-        price: '4 700 руб.',
-        url: 'https://www.google.es',
-        available: true,
-        isNew: true,
-        hasOffer: true
-      }, {
-        image: 'https://dawos.ru/20300-home_default/26498-SUOK713-SWATCH-POLAWHITE.jpg',
-        name: 'SWATCH POLAWHITE',
-        brand: 'Swatch',
-        model: 'SUOK713',
-        price: '4 700 руб.',
-        url: 'https://www.google.es',
-        available: true,
-        isNew: true,
-        hasOffer: true
-      }, {
-        image: 'https://dawos.ru/20300-home_default/26498-SUOK713-SWATCH-POLAWHITE.jpg',
-        name: 'SWATCH POLAWHITE',
-        brand: 'Swatch',
-        model: 'SUOK713',
-        price: '4 700 руб.',
-        url: 'https://www.google.es',
-        available: true,
-        isNew: true,
-        hasOffer: true
-      }, {
-        image: 'https://dawos.ru/19806-home_default/26303-T1154071704100-TISSOT-T-Race-Swissmatic.jpg',
-        name: 'TISSOT T-Race Swissmatic',
-        brand: 'Tissot',
-        model: 'T115.407.17.041.00',
-        price: '41 250 руб.',
-        url: 'https://www.google.es',
-        available: true,
-        isNew: true,
-        hasOffer: true
-      }, {
-        image: 'https://dawos.ru/20300-home_default/26498-SUOK713-SWATCH-POLAWHITE.jpg',
-        name: 'SWATCH POLAWHITE',
-        brand: 'Swatch',
-        model: 'SUOK713',
-        price: '4 700 руб.',
-        url: 'https://www.google.es',
-        available: true,
-        isNew: true,
-        hasOffer: true
-      }, {
-        image: 'https://dawos.ru/20300-home_default/26498-SUOK713-SWATCH-POLAWHITE.jpg',
-        name: 'SWATCH POLAWHITE',
-        brand: 'Swatch',
-        model: 'SUOK713',
-        price: '4 700 руб.',
-        url: 'https://www.google.es',
-        available: true,
-        isNew: true,
-        hasOffer: true
-      }, {
-        image: 'https://dawos.ru/20300-home_default/26498-SUOK713-SWATCH-POLAWHITE.jpg',
-        name: 'SWATCH POLAWHITE',
-        brand: 'Swatch',
-        model: 'SUOK713',
-        price: '4 700 руб.',
-        url: 'https://www.google.es',
-        available: true,
-        isNew: true,
-        hasOffer: true
-      }]
+    export default {
+        name: 'ProductGrid',
+        computed: {
+            buy: () => business.buy,
+            products: () => [{
+                image: 'https://dawos.ru/20300-home_default/26498-SUOK713-SWATCH-POLAWHITE.jpg',
+                name: 'SWATCH POLAWHITE',
+                brand: 'Swatch',
+                model: 'SUOK713',
+                price: '4 700 руб.',
+                url: 'https://www.google.es',
+                available: true,
+                isNew: true,
+                hasOffer: true
+            }, {
+                image: 'https://dawos.ru/20300-home_default/26498-SUOK713-SWATCH-POLAWHITE.jpg',
+                name: 'SWATCH POLAWHITE',
+                brand: 'Swatch',
+                model: 'SUOK713',
+                price: '4 700 руб.',
+                url: 'https://www.google.es',
+                available: true,
+                isNew: true,
+                hasOffer: true
+            }, {
+                image: 'https://dawos.ru/20300-home_default/26498-SUOK713-SWATCH-POLAWHITE.jpg',
+                name: 'SWATCH POLAWHITE',
+                brand: 'Swatch',
+                model: 'SUOK713',
+                price: '4 700 руб.',
+                url: 'https://www.google.es',
+                available: true,
+                isNew: true,
+                hasOffer: true
+            }, {
+                image: 'https://dawos.ru/20300-home_default/26498-SUOK713-SWATCH-POLAWHITE.jpg',
+                name: 'SWATCH POLAWHITE',
+                brand: 'Swatch',
+                model: 'SUOK713',
+                price: '4 700 руб.',
+                url: 'https://www.google.es',
+                available: true,
+                isNew: true,
+                hasOffer: true
+            }, {
+                image: 'https://dawos.ru/20300-home_default/26498-SUOK713-SWATCH-POLAWHITE.jpg',
+                name: 'SWATCH POLAWHITE',
+                brand: 'Swatch',
+                model: 'SUOK713',
+                price: '4 700 руб.',
+                url: 'https://www.google.es',
+                available: true,
+                isNew: true,
+                hasOffer: true
+            }, {
+                image: 'https://dawos.ru/20300-home_default/26498-SUOK713-SWATCH-POLAWHITE.jpg',
+                name: 'SWATCH POLAWHITE',
+                brand: 'Swatch',
+                model: 'SUOK713',
+                price: '4 700 руб.',
+                url: 'https://www.google.es',
+                available: true,
+                isNew: true,
+                hasOffer: true
+            }, {
+                image: 'https://dawos.ru/20300-home_default/26498-SUOK713-SWATCH-POLAWHITE.jpg',
+                name: 'SWATCH POLAWHITE',
+                brand: 'Swatch',
+                model: 'SUOK713',
+                price: '4 700 руб.',
+                url: 'https://www.google.es',
+                available: true,
+                isNew: true,
+                hasOffer: true
+            }, {
+                image: 'https://dawos.ru/20300-home_default/26498-SUOK713-SWATCH-POLAWHITE.jpg',
+                name: 'SWATCH POLAWHITE',
+                brand: 'Swatch',
+                model: 'SUOK713',
+                price: '4 700 руб.',
+                url: 'https://www.google.es',
+                available: true,
+                isNew: true,
+                hasOffer: true
+            }, {
+                image: 'https://dawos.ru/20300-home_default/26498-SUOK713-SWATCH-POLAWHITE.jpg',
+                name: 'SWATCH POLAWHITE',
+                brand: 'Swatch',
+                model: 'SUOK713',
+                price: '4 700 руб.',
+                url: 'https://www.google.es',
+                available: true,
+                isNew: true,
+                hasOffer: true
+            }, {
+                image: 'https://dawos.ru/19806-home_default/26303-T1154071704100-TISSOT-T-Race-Swissmatic.jpg',
+                name: 'TISSOT T-Race Swissmatic',
+                brand: 'Tissot',
+                model: 'T115.407.17.041.00',
+                price: '41 250 руб.',
+                url: 'https://www.google.es',
+                available: true,
+                isNew: true,
+                hasOffer: true
+            }, {
+                image: 'https://dawos.ru/20300-home_default/26498-SUOK713-SWATCH-POLAWHITE.jpg',
+                name: 'SWATCH POLAWHITE',
+                brand: 'Swatch',
+                model: 'SUOK713',
+                price: '4 700 руб.',
+                url: 'https://www.google.es',
+                available: true,
+                isNew: true,
+                hasOffer: true
+            }, {
+                image: 'https://dawos.ru/20300-home_default/26498-SUOK713-SWATCH-POLAWHITE.jpg',
+                name: 'SWATCH POLAWHITE',
+                brand: 'Swatch',
+                model: 'SUOK713',
+                price: '4 700 руб.',
+                url: 'https://www.google.es',
+                available: true,
+                isNew: true,
+                hasOffer: true
+            }, {
+                image: 'https://dawos.ru/20300-home_default/26498-SUOK713-SWATCH-POLAWHITE.jpg',
+                name: 'SWATCH POLAWHITE',
+                brand: 'Swatch',
+                model: 'SUOK713',
+                price: '4 700 руб.',
+                url: 'https://www.google.es',
+                available: true,
+                isNew: true,
+                hasOffer: true
+            }]
+        }
     }
-  }
 </script>
