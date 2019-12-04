@@ -28,6 +28,12 @@
   --color-accent-lumnosity: 66%;
   --color-accent-hsl: var(--color-accent-hue), var(--color-accent-saturation), var(--color-accent-lumnosity);
   --color-accent: hsl(var(--color-accent-hsl));
+  //
+  --color-accent-dark-hue: 39;
+  --color-accent-dark-saturation: 100%;
+  --color-accent-dark-lumnosity: 66%;
+  --color-accent-dark-hsl: var(--color-accent-dark-hue), var(--color-accent-dark-saturation), var(--color-accent-dark-lumnosity);
+  --color-accent-dark: hsl(var(--color-accent-dark-hsl));
 
   // Grery colors
   @for $i from 0 through 20 {
