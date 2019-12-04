@@ -1,20 +1,20 @@
 <template>
     <nav class="product-grid product-grid--default">
         <div v-for="product in products" :key="product.model" class="product-grid__element">
-            <img class="product-grid__element__image" :src="product.image">
-            <div class="product-grid__element__title">
+            <img class="element__image" :src="product.image">
+            <div class="title">
                 {{ product.collection }}
             </div>
-            <div :if="product.brand" class="product-grid__element__brand">
+            <div :if="product.brand" class="brand">
                 {{ product.brand }}
             </div>
-            <div class="product-grid__element__model">
+            <div class="model">
                 {{ product.model }}
             </div>
-            <div class="product-grid__element__price">
+            <div class="price">
                 {{ product.price }}
             </div>
-            <a class="product-grid__element__button" :href="product.url">{{ buy }}</a>
+            <a class="button" :href="product.url">{{ buy }}</a>
         </div>
     </nav>
 </template>
