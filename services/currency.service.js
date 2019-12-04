@@ -21,7 +21,7 @@ export default class CurrencyService {
 
             return negativeSign + (j ? i.substr(0, j) + this.separator : '') + i.substr(j).replace(/(\d{3})(?=\d)/g, '$1' + this.separator) + (this.decimalCount ? this.decimal + Math.abs(amount - i).toFixed(this.decimalCount).slice(2) : '')
         } catch (e) {
-            console.log(e)
+            //
         }
     }
 }

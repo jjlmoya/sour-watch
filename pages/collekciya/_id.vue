@@ -1,7 +1,7 @@
 <template>
     <div class="home">
         <Layout>
-            {{ this.id }}
+            {{ id }}
         </Layout>
     </div>
 </template>
@@ -26,7 +26,6 @@
             return {
                 title: 'Vostok Europa - ' + this.id,
                 meta: [
-                    // hid is used as unique identifier. Do not use `vmid` for it as it will not work
                     {
                         hid: 'description',
                         name: 'description',

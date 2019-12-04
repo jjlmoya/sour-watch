@@ -26,6 +26,32 @@
         border-radius: 50%;
         color: white;
         z-index: 1000;
+
+        svg {
+          fill: black;
+          position: absolute;
+          width: 20px;
+          left: 10px;
+          top: 10px;
+
+          rect {
+            transition: all 0.3s ease-in;
+          }
+        }
+
+        &.is-active {
+          rect {
+            transform: translateX(400px);
+          }
+
+          rect:first-child {
+            transform: rotate(45deg) translate(60px, -300px);
+          }
+
+          rect:last-child {
+            transform: rotate(-45deg) translate(-180px, 170px);
+          }
+        }
       }
 
       &__options {

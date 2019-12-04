@@ -8,6 +8,11 @@
 
 <script>
     export default {
-        props: ['modifier']
+        props: {
+            modifier: {
+                type: String,
+                default: ''
+            }
+        }
     }
 </script>
