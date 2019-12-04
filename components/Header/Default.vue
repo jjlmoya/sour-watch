@@ -8,13 +8,13 @@
                     {{ time }}
                 </div>
                 <div class="icon">
-                    <img src="/icons/smartphone.svg">
+                    <img src="icons/smartphone.svg">
                 </div>
             </div>
             <div class="header__searcher">
                 <input class="searcher" type="text" :placeholder="search">
                 <div class="icon">
-                    <img src="/icons/search.svg">
+                    <img src="icons/search.svg">
                 </div>
             </div>
         </div>
@@ -28,13 +28,13 @@
                         {{ time }}
                     </div>
                     <div class="icon">
-                        <img src="/icons/smartphone.svg">
+                        <img src="icons/smartphone.svg">
                     </div>
                 </div>
                 <div class="header__searcher">
                     <input class="searcher" type="text" :placeholder="search">
                     <div class="icon">
-                        <img src="/icons/search.svg">
+                        <img src="icons/search.svg">
                     </div>
                 </div>
             </div>

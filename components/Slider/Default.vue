@@ -11,10 +11,10 @@
         </div>
         <div class="slider__arrows">
             <span class="arrow prev" @click="move(-1)">
-                <img class="icon" src="/icons/arrow.svg">
+                <img class="icon" src="icons/arrow.svg">
             </span>
             <span class="arrow next" @click="move(1)">
-                <img class="icon" src="/icons/arrow.svg">
+                <img class="icon" src="icons/arrow.svg">
             </span>
         </div>
         <ul class="slider__dots">
