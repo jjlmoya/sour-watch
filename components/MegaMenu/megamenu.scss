@@ -13,7 +13,7 @@
 
   &__element {
     margin: 0 20px;
-    font-size: 12px;
+    font-size: var(--font-size-xs);
     text-transform: uppercase;
     opacity: 0.6;
     white-space: nowrap;

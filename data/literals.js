@@ -4,5 +4,5 @@ export const header = {
     search: 'Найти'
 }
 export const business = {
-    buy: 'В КОРЗИНУ'
+    buy: 'В корзину'
 }
