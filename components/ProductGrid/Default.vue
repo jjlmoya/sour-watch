@@ -12,7 +12,7 @@
                 {{ product.model }}
             </div>
             <div class="price">
-                {{ product.price }}
+                {{ getCurrency(product.price) }}
             </div>
             <a class="button" :href="product.url">{{ buy }}</a>
         </div>
@@ -25,12 +25,18 @@
 <script>
     import { business } from '@/data/literals'
     import { watches } from '@/data/product'
-
+    import CurrencyService from '@/services/currency.service'
+    const currencyService = new CurrencyService({})
     export default {
         name: 'ProductGrid',
         computed: {
             buy: () => business.buy,
             products: () => watches
+        },
+        methods: {
+            getCurrency (price) {
+                return currencyService.get(price)
+            }
         }
     }
 </script>

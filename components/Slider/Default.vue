@@ -66,7 +66,6 @@
         },
         methods: {
             move (amount) {
-                console.log(this.active)
                 let newActive
                 const newIndex = this.active + amount
                 if (newIndex > this.slides.length - 1) newActive = 0
