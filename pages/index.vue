@@ -1,5 +1,5 @@
 <template>
-    <div class="home">
+    <div class="home" :class="theme">
         <Layout>
             <Slider />
             <ProductGrid />
@@ -8,6 +8,7 @@
 </template>
 
 <script>
+    import { mapState } from 'vuex'
     import Layout from '@/layouts/Default.vue'
     import Slider from '@/components/Slider/Default.vue'
     import ProductGrid from '@/components/ProductGrid/Default.vue'
@@ -18,6 +19,14 @@
             Layout,
             Slider,
             ProductGrid
+        },
+        computed: {
+            ...mapState('theme', [
+                'theme'
+            ])
+        },
+        created () {
+            this.$store.commit('theme/set', 'vostok')
         },
         head () {
             return {

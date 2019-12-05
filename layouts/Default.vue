@@ -11,6 +11,7 @@
                 <slot />
             </div>
         </div>
+        <Footer />
     </div>
 </template>
 <style lang="scss">@import 'default.scss';
@@ -18,12 +19,14 @@
 <script>
     import HeaderDefault from '@/components/Header/Default.vue'
     import MegaMenu from '@/components/MegaMenu/Default.vue'
+    import Footer from '@/components/Footer/Default.vue'
 
     export default {
         name: 'DefaultLayout',
         components: {
             HeaderDefault,
-            MegaMenu
+            MegaMenu,
+            Footer
         }
     }
 </script>

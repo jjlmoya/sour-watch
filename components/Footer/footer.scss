@@ -1,6 +1,17 @@
 .footer-default {
-  background-color: white;
-  position: fixed;
-  bottom: 0;
+  background-color: black;
+  display: grid;
   width: 100%;
+  grid-template-columns: 1fr 1fr 2fr;
+  color: white;
+  padding: 20px;
+
+  .footer {
+    &-links,
+    &-static,
+    &-contact {
+      padding: 20px;
+      border-right: 1px solid white;
+    }
+  }
 }
