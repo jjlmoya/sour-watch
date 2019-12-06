@@ -1,7 +1,7 @@
 <template>
     <nav class="product-grid product-grid--default">
         <div v-for="product in products" :key="product.model" class="product-grid__element">
-            <img class="element__image" :src="product.image">
+            <img class="element__image" :src="product.Images[0].url">
             <div class="title">
                 {{ product.collection }}
             </div>
@@ -23,15 +23,20 @@
 </style>
 
 <script>
+    import { mapState } from 'vuex'
     import { business } from '@/data/literals'
-    import { watches } from '@/data/product'
     import CurrencyService from '@/services/currency.service'
     const currencyService = new CurrencyService({})
     export default {
         name: 'ProductGrid',
         computed: {
             buy: () => business.buy,
-            products: () => watches
+            ...mapState('theme', [
+                'theme'
+            ]),
+            ...mapState({
+                products: state => state.watches.list
+            })
         },
         methods: {
             getCurrency (price) {
