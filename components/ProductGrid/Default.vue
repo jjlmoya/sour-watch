@@ -1,7 +1,7 @@
 <template>
     <nav class="product-grid product-grid--default">
         <div v-for="product in products" :key="product.model" class="product-grid__element">
-            <img class="element__image" :src="product.Images[0].url">
+            <img class="element__image" :src="getImages(product.images)">
             <div class="title">
                 {{ product.collection }}
             </div>
@@ -41,6 +41,13 @@
         methods: {
             getCurrency (price) {
                 return currencyService.get(price)
+            },
+            getImages (images) {
+                const _mainImage = function (images) {
+                    const mainImages = images.filter(image => image.main)
+                    return mainImages.length ? mainImages[0].url : images[0].url
+                }
+                return images & images.length > 0 ? _mainImage(images) : ''
             }
         }
     }
