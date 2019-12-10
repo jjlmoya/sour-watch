@@ -20,9 +20,6 @@
             Slider,
             ProductGrid
         },
-        async fetch ({ store }) {
-            await store.dispatch('watches/get')
-        },
         computed: {
             ...mapState('theme', [
                 'theme'

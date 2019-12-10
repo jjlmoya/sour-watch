@@ -1,18 +1,23 @@
 <template>
     <div class="home">
         <Layout>
-            {{ id }}
+            <ProductHeading />
+            <ProductProperties />
         </Layout>
     </div>
 </template>
 
 <script>
     import Layout from '@/layouts/Default.vue'
+    import ProductHeading from '@/components/ProductHeading/Default.vue'
+    import ProductProperties from '@/components/ProductProperties/Default.vue'
 
     export default {
-        name: 'Collection',
+        name: 'Watch',
         components: {
-            Layout
+            Layout,
+            ProductHeading,
+            ProductProperties
         },
         validate ({ params }) {
             return !!params.id
