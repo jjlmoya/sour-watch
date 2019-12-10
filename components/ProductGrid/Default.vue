@@ -1,16 +1,16 @@
 <template>
     <nav class="product-grid product-grid--default">
         <div v-for="product in products" :key="product.model" class="product-grid__element">
-            <img class="element__image" :src="getImages(product.images)">
+            <img class="element__image" :src="getMainImage(product.images)">
             <div class="title">
                 {{ product.collection }}
             </div>
             <div :if="product.brand" class="brand">
                 {{ product.brand }}
             </div>
-            <div class="model">
+            <a class="model" :href="getUri(product.model)">
                 {{ product.model }}
-            </div>
+            </a>
             <div class="price">
                 {{ getCurrency(product.price) }}
             </div>
@@ -39,15 +39,18 @@
             })
         },
         methods: {
+            getUri (model) {
+                return './chasy/' + encodeURIComponent(model)
+            },
             getCurrency (price) {
                 return currencyService.get(price)
             },
-            getImages (images) {
+            getMainImage (images) {
                 const _mainImage = function (images) {
                     const mainImages = images.filter(image => image.main)
                     return mainImages.length ? mainImages[0].url : images[0].url
                 }
-                return images & images.length > 0 ? _mainImage(images) : ''
+                return images.length > 0 ? _mainImage(images) : ''
             }
         }
     }
