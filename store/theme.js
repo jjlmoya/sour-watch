@@ -1,5 +1,17 @@
 export const state = () => ({
-    theme: ''
+    theme: '',
+    brands: [],
+    campaings: {
+        blackfriday: {
+            name: 'blackfriday',
+            class: 'blackfriday',
+            unique: true
+        },
+        winter: {
+            name: 'winter',
+            class: 'winter'
+        }
+    }
 })
 
 export const mutations = {

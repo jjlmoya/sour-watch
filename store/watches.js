@@ -13,8 +13,6 @@ export const mutations = {
         state.selected = watch
     },
     id (state, value) {
-        console.log(state)
-        console.log(value)
         state.selected = state.list.find(c => c.model === value)
     },
     add (state, value) {
