@@ -1,11 +1,11 @@
 <template>
     <div class="slider slider__default">
         <div class="slider__slides slides">
-            <div v-for="(slide, index) in slides" :key="slide.image">
+            <div v-for="(image, index) in images" :key="image.url">
                 <div
                     v-if="isSlideActive(index)"
                     class="slide"
-                    :style="{'background-image':`url(product/${slide.image})`}"
+                    :style="{'background-image':`url(${image.url})`}"
                 />
             </div>
         </div>
@@ -19,7 +19,7 @@
         </div>
         <ul class="slider__dots">
             <li
-                v-for="(dot, index) in slides"
+                v-for="(dot, index) in images"
                 :key="index"
                 class="dot"
                 :class="{ active: isDotActive(index)}"
@@ -32,30 +32,21 @@
 </style>
 <script>
     export default {
+        props: {
+            images: {
+                type: Array,
+                default: () => [
+                    {
+                        url: 'product/504.jpg'
+                    },
+                    {
+                        url: 'product/Almaz-1.jpg'
+                    }]
+            }
+        },
         data: () => {
             return {
-                slides: [
-                    {
-                        image: '504.jpg'
-                    },
-                    {
-                        image: 'Almaz-1.jpg'
-                    },
-                    {
-                        image: 'Energia.jpg'
-                    },
-                    {
-                        image: 'Expedition-555-1.jpg'
-                    },
-                    {
-                        image: 'Lunokhod-2-1.jpg'
-                    },
-                    {
-                        image: 'Lunokhod-278-Preview.jpg'
-                    },
-                    {
-                        image: 'New-Energia-Open-Balans2-1.jpg'
-                    }],
+
                 active: 0
             }
         },
@@ -68,8 +59,8 @@
             move (amount) {
                 let newActive
                 const newIndex = this.active + amount
-                if (newIndex > this.slides.length - 1) newActive = 0
-                if (newIndex === -1) newActive = this.slides.length - 1
+                if (newIndex > this.images.length - 1) newActive = 0
+                if (newIndex === -1) newActive = this.images.length - 1
                 this.active = newActive || newActive === 0 ? newActive : newIndex
             },
             jump (index) {
