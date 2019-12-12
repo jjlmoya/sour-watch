@@ -1,8 +1,41 @@
 .product-heading {
   display: grid;
   background: white;
+  padding: 10px;
 
   &__title {
-    font-size: var(--font-size-3xl);
+    font-size: var(--font-size-2xl);
+    padding: 20px 0;
+
+    .subtitle {
+      font-size: var(--font-size-xs);
+    }
+  }
+
+  &__details {
+    font-size: var(--font-size-xl);
+
+    .price {
+      font-weight: var(--font-weight-black);
+    }
+
+    .availability {
+      font-size: var(--font-size-2xs);
+
+      .info {
+        font-weight: var(--font-weight-black);
+        color: var(--color-info);
+      }
+
+      .warning {
+        font-weight: var(--font-weight-black);
+        color: var(--color-warning);
+      }
+
+      .error {
+        font-weight: var(--font-weight-black);
+        color: var(--color-error);
+      }
+    }
   }
 }

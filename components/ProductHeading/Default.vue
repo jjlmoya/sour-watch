@@ -1,13 +1,24 @@
 <template>
     <nav class="product-heading product-heading--default">
-        <h1 class="product-heading__title">
-            {{ product.model }}
-        </h1>
         <Double :columns="'1-1'">
             <template slot="right">
-                <div>{{ product.collection }}</div>
-                <div>{{ product.brand }}</div>
-                <div>{{ getCurrency(product.price) }}</div>
+                <h1 class="product-heading__title">
+                    <div class="title">
+                        {{ product.collection }},
+                        <span class="f-strong">{{ product.model }}</span>
+                    </div>
+                    <div class="subtitle">
+                        ({{ product.brand }})
+                    </div>
+                </h1>
+                <div class="product-heading__details">
+                    <div class="price">
+                        {{ getCurrency(product.price) }}
+                    </div>
+                    <div class="availability">
+                        В наличии <span :class="product.stock === 0 ? 'error' : product.stock > 2 ? 'info' : 'warning' ">{{ product.stock }} часов </span>
+                    </div>
+                </div>
                 <div>{{ product.isNew }}</div>
                 <div>{{ product.discount }}</div>
                 <div>{{ product.description }}</div>
@@ -21,6 +32,7 @@
                 <div>{{ product.height }}</div>
                 <div>{{ product.thickness }}</div>
                 <div>{{ product.glass }}</div>
+
                 <div>
                     <h2>Pulseras</h2>
                     <div v-for="bracelet in product.bracelets" :key="bracelet.id">
@@ -32,6 +44,7 @@
                     <div v-for="property in product.properties" :key="property.id">
                         {{ property.name }} - {{ property.WatchProperty.value }}
                     </div>
+                </div>
                 </div>
             </template>
             <template slot="left">
