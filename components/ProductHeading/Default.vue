@@ -1,5 +1,5 @@
 <template>
-    <nav class="product-heading product-heading--default">
+    <div class="product-heading product-heading--default" :class="product.isNew ? 'is-new' : ''">
         <Double :columns="'1-1'">
             <template slot="right">
                 <h1 class="product-heading__title">
@@ -45,7 +45,6 @@
                         {{ property.name }} - {{ property.WatchProperty.value }}
                     </div>
                 </div>
-                </div>
             </template>
             <template slot="left">
                 <Slider :images="product.images" />
@@ -56,7 +55,7 @@
                 -->
             </template>
         </Double>
-    </nav>
+    </div>
 </template>
 
 <style lang="scss">@import 'product-heading.scss';
