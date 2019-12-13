@@ -19,7 +19,6 @@
                         В наличии <span :class="product.stock === 0 ? 'error' : product.stock > 2 ? 'info' : 'warning' ">{{ product.stock }} часов </span>
                     </div>
                 </div>
-                <div>{{ product.isNew }}</div>
                 <div>{{ product.discount }}</div>
                 <div>{{ product.description }}</div>
                 <div>{{ product.gender }}</div>
@@ -48,11 +47,6 @@
             </template>
             <template slot="left">
                 <Slider :images="product.images" />
-                <!--
-                <div v-for="image in product.images" :key="image.id">
-                    <img :src="image.url" :alt="image.alt" title="image.title" :description="image.description">
-                </div>
-                -->
             </template>
         </Double>
     </div>
