@@ -28,6 +28,9 @@
                         <div class="description">
                             {{ product.description }}
                         </div>
+                        <button class="button button--default">
+                            Продолжить
+                        </button>
                     </div>
                     <div style="display: none;">
                         <div>{{ product.gender }}</div>
