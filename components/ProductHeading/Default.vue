@@ -1,6 +1,6 @@
 <template>
     <div class="product-heading product-heading--default" :class="product.isNew ? 'is-new' : ''">
-        <Double :columns="'2-1'">
+        <Double :columns="'1-1'">
             <template slot="right">
                 <div class="product-heading__info">
                     <h1 class="product-heading__title">
@@ -16,7 +16,6 @@
                         <div v-if="product.discount" class="discount">
                             -{{ product.discount }}%
                         </div>
-
                         <div class="price">
                             <div v-if="product.discount" class="price--old">
                                 {{ getCurrency(product.price) }}
@@ -26,30 +25,33 @@
                         <div class="availability">
                             В наличии <span :class="product.stock === 0 ? 'error' : product.stock > 2 ? 'info' : 'warning' ">{{ product.stock }} часов </span>
                         </div>
-                    </div>
-
-                    <div>{{ product.description }}</div>
-                    <div>{{ product.gender }}</div>
-                    <div>{{ product.mechanism }}</div>
-                    <div>{{ product.calibre }}</div>
-                    <div>{{ product.mechanismOrigin }}</div>
-                    <div>{{ product.watchCase }}</div>
-                    <div>{{ product.waterResistant }}</div>
-                    <div>{{ product.width }}</div>
-                    <div>{{ product.height }}</div>
-                    <div>{{ product.thickness }}</div>
-                    <div>{{ product.glass }}</div>
-
-                    <div>
-                        <h2>Pulseras</h2>
-                        <div v-for="bracelet in product.bracelets" :key="bracelet.id">
-                            {{ bracelet.material }}
+                        <div class="description">
+                            {{ product.description }}
                         </div>
                     </div>
-                    <div>
-                        <h2>Propiedades</h2>
-                        <div v-for="property in product.properties" :key="property.id">
-                            {{ property.name }} - {{ property.WatchProperty.value }}
+                    <div style="display: none;">
+                        <div>{{ product.gender }}</div>
+                        <div>{{ product.mechanism }}</div>
+                        <div>{{ product.calibre }}</div>
+                        <div>{{ product.mechanismOrigin }}</div>
+                        <div>{{ product.watchCase }}</div>
+                        <div>{{ product.waterResistant }}</div>
+                        <div>{{ product.width }}</div>
+                        <div>{{ product.height }}</div>
+                        <div>{{ product.thickness }}</div>
+                        <div>{{ product.glass }}</div>
+
+                        <div>
+                            <h2>Pulseras</h2>
+                            <div v-for="bracelet in product.bracelets" :key="bracelet.id">
+                                {{ bracelet.material }}
+                            </div>
+                        </div>
+                        <div>
+                            <h2>Propiedades</h2>
+                            <div v-for="property in product.properties" :key="property.id">
+                                {{ property.name }} - {{ property.WatchProperty.value }}
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -2,6 +2,8 @@
   display: grid;
   background: white;
   padding: 10px;
+  max-width: 90%;
+  margin: 0 auto;
 
   &__title {
     font-size: var(--font-size-2xl);
@@ -69,6 +71,14 @@
         font-weight: var(--font-weight-black);
         color: var(--color-error);
       }
+    }
+
+    .description {
+      font-size: var(--font-size-xs);
+      padding-right: 50px;
+      opacity: 0.5;
+      line-height: 18px;
+      word-spacing: 2px;
     }
   }
 
