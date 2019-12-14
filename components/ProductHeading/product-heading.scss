@@ -12,11 +12,43 @@
     }
   }
 
+  &__info {
+    padding: 20px;
+    margin-right: 20px;
+    box-shadow: var(--shadow-close);
+  }
+
   &__details {
+    position: relative;
     font-size: var(--font-size-xl);
+
+    .discount {
+      position: absolute;
+      right: -20px;
+      top: 0;
+      background-color: var(--color-info);
+      padding: 5px 15px;
+      color: white;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -17px;
+        border: 16.5px solid var(--color-info);
+        border-left-color: transparent;
+      }
+    }
 
     .price {
       font-weight: var(--font-weight-black);
+      font-size: var(--font-size-xl);
+
+      &--old {
+        text-decoration: line-through;
+        font-size: var(--font-size-xs);
+        color: var(--color-error);
+      }
     }
 
     .availability {
@@ -38,5 +70,9 @@
         color: var(--color-error);
       }
     }
+  }
+
+  .slider {
+    padding-top: 40px;
   }
 }
