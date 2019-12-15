@@ -1,13 +1,8 @@
 .specifications {
   margin-top: 20px;
 
-  &__row {
-    display: block;
-  }
-
   &__heading {
     text-align: left;
-    min-width: 150px;
     padding: 5px 10px;
     background-color: #444;
     color: white;
@@ -18,5 +13,37 @@
     min-width: 150px;
     padding: 5px 10px;
     color: black;
+  }
+
+  &--text {
+    .specifications {
+      &__row {
+        display: inline-block;
+        width: 100%;
+        line-height: 25px;
+        padding: 0 20px;
+      }
+
+      &__value,
+      &__heading {
+        padding: 0;
+        min-width: 15;
+      }
+
+      &__heading {
+        background: transparent;
+        color: var(--color-text);
+
+        &::after {
+          content: ':';
+          padding-right: 5px;
+          margin-left: -3px;
+        }
+      }
+
+      &__value {
+        border: none;
+      }
+    }
   }
 }

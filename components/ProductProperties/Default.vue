@@ -5,36 +5,38 @@
             <template slot="left">
                 <Specifications
                     :specifications="[{
-                        name: 'Gender',
-                        value: product.gender
-                    }, {
-                        name: 'Mechanism',
-                        value: product.mechanism
-                    }, {
-                        name: 'Calibre',
-                        value: product.calibre
-                    }, {
-                        name: 'Origin',
-                        value: product.mechanismOrigin
-                    }, {
-                        name: 'watchCase',
-                        value: product.watchCase
-                    }, {
-                        name: 'waterResitant',
-                        value: product.waterResistant
-                    }, {
-                        name: 'width',
-                        value: product.width
-                    }, {
-                        name: 'height',
-                        value: product.height
-                    }, {
-                        name: 'thickness',
-                        value: product.thickness
-                    }, {
-                        name: 'glass',
-                        value: product.glass
-                    }]"
+                                          name: 'Gender',
+                                          value: product.gender
+                                      }, {
+                                          name: 'Mechanism',
+                                          value: product.mechanism
+                                      }, {
+                                          name: 'Calibre',
+                                          value: product.calibre
+                                      }, {
+                                          name: 'Origin',
+                                          value: product.mechanismOrigin
+                                      }, {
+                                          name: 'watchCase',
+                                          value: product.watchCase
+                                      }, {
+                                          name: 'waterResitant',
+                                          value: product.waterResistant
+                                      }, {
+                                          name: 'width',
+                                          value: product.width
+                                      }, {
+                                          name: 'height',
+                                          value: product.height
+                                      }, {
+                                          name: 'thickness',
+                                          value: product.thickness
+                                      }, {
+                                          name: 'glass',
+                                          value: product.glass
+                                      },
+                                      ... getProductProperties(product.properties)
+                    ]"
                 />
             </template>
             <template slot="right">
@@ -71,6 +73,14 @@
         methods: {
             getCurrency (price) {
                 return currencyService.get(price)
+            },
+            getProductProperties (properties) {
+                return properties.map((property) => {
+                    return {
+                        name: property.name,
+                        value: property.WatchProperty.value || 'DA'
+                    }
+                })
             }
         }
     }
