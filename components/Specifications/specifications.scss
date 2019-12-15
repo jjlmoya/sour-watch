@@ -1,0 +1,22 @@
+.specifications {
+  margin-top: 20px;
+
+  &__row {
+    display: block;
+  }
+
+  &__heading {
+    text-align: left;
+    min-width: 150px;
+    padding: 5px 10px;
+    background-color: #444;
+    color: white;
+  }
+
+  &__value {
+    border-bottom: 1px solid black;
+    min-width: 150px;
+    padding: 5px 10px;
+    color: black;
+  }
+}

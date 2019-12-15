@@ -29,7 +29,7 @@
                             {{ product.description }}
                         </div>
                         <div class="product-heading__buttons">
-                            <button class="button button--ghost button--secondary button--s">
+                            <button class="button button--secondary button--s">
                                 Продолжить
                             </button>
                         </div>
@@ -72,7 +72,6 @@
 </style>
 
 <script>
-    import { mapState } from 'vuex'
     import { business } from '@/data/literals'
     import CurrencyService from '@/services/currency.service'
     import Double from '@/layouts/Double.vue'
@@ -85,11 +84,14 @@
             Double,
             Slider
         },
+        props: {
+            product: {
+                type: Object,
+                default: () => {}
+            }
+        },
         computed: {
-            buy: () => business.buy,
-            ...mapState({
-                product: state => state.watches.selected
-            })
+            buy: () => business.buy
         },
         methods: {
             getCurrency (price) {

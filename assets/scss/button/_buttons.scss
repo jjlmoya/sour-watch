@@ -5,10 +5,10 @@
 
   &--secondary {
     background-color: var(--color-secondary);
-  }
 
-  &--action {
-    border: 1px solid black;
+    &:hover {
+      background-color: var(--color-primary);
+    }
   }
 
   &--ghost {
@@ -16,10 +16,20 @@
     color: var(--color-primary);
     border: 1px solid var(--color-primary);
 
+    &:hover {
+      background-color: var(--color-primary);
+      color: var(--color-text-secondary);
+    }
+
     &.button {
       &--secondary {
         border: 1px solid var(--color-secondary);
         color: var(--color-secondary);
+
+        &:hover {
+          background-color: var(--color-secondary);
+          color: var(--color-text-secondary);
+        }
       }
     }
   }

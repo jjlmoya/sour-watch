@@ -1,13 +1,14 @@
 <template>
     <div class="home">
         <Layout>
-            <ProductHeading />
-            <ProductProperties />
+            <ProductHeading :product="product" />
+            <ProductProperties :product="product" />
         </Layout>
     </div>
 </template>
 
 <script>
+    import { mapState } from 'vuex'
     import Layout from '@/layouts/Default.vue'
     import ProductHeading from '@/components/ProductHeading/Default.vue'
     import ProductProperties from '@/components/ProductProperties/Default.vue'
@@ -25,7 +26,10 @@
         computed: {
             id () {
                 return this.$route.params.id
-            }
+            },
+            ...mapState({
+                product: state => state.watches.selected
+            })
         },
         head () {
             return {
