@@ -28,9 +28,11 @@
                         <div class="description">
                             {{ product.description }}
                         </div>
-                        <button class="button button--default">
-                            Продолжить
-                        </button>
+                        <div class="product-heading__buttons">
+                            <button class="button button--ghost button--secondary button--s">
+                                Продолжить
+                            </button>
+                        </div>
                     </div>
                     <div style="display: none;">
                         <div>{{ product.gender }}</div>

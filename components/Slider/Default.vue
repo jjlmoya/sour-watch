@@ -10,10 +10,10 @@
             </div>
         </div>
         <div class="slider__arrows">
-            <span class="arrow prev" @click="move(-1)">
+            <span class="arrow prev button button--ghost button--secondary" @click="move(-1)">
                 <img class="icon" src="icons/arrow.svg">
             </span>
-            <span class="arrow next" @click="move(1)">
+            <span class="arrow next button button--ghost button--secondary" @click="move(1)">
                 <img class="icon" src="icons/arrow.svg">
             </span>
         </div>
