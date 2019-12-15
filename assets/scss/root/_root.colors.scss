@@ -58,6 +58,19 @@
   --color-error-lumnosity: 56%;
   --color-error-hsl: var(--color-error-hue), var(--color-error-saturation), var(--color-error-lumnosity);
   --color-error: hsl(var(--color-error-hsl));
+  //Text Color
+  --color-text-hue: 0;
+  --color-text-saturation: 0%;
+  --color-text-lumnosity: 0%;
+  --color-text-hsl: var(--color-text-hue), var(--color-text-saturation), var(--color-text-lumnosity);
+  --color-text: hsl(var(--color-text-hsl));
+
+  //Text Color Secondary
+  --color-text-secondary-hue: 100;
+  --color-text-secondary-saturation: 100%;
+  --color-text-secondary-lumnosity: 100%;
+  --color-text-secondary-hsl: var(--color-text-secondary-hue), var(--color-text-secondary-saturation), var(--color-text-secondary-lumnosity);
+  --color-text-secondary: hsl(var(--color-text-secondary-hsl));
 
   // Gray colors
   @for $i from 0 through 20 {

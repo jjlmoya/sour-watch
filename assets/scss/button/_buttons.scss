@@ -1,8 +1,30 @@
 .button {
-  color: red;
-  padding: 5px 20px;
+  cursor: pointer;
+  background-color: var(--color-primary);
+  color: var(--color-text-secondary);
+
+  &--secondary {
+    background-color: var(--color-secondary);
+  }
 
   &--action {
     border: 1px solid black;
+  }
+
+  &--ghost {
+    background-color: transparent;
+    color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+
+    &.button {
+      &--secondary {
+        border: 1px solid var(--color-secondary);
+        color: var(--color-secondary);
+      }
+    }
+  }
+
+  &--s {
+    padding: 5px 20px;
   }
 }
