@@ -14,7 +14,7 @@
             <div class="price">
                 {{ getCurrency(product.price) }}
             </div>
-            <a class="button" :href="product.url">{{ buy }}</a>
+            <a class="button button--ghost button--secondary button--s" :href="product.url">{{ buy }}</a>
         </div>
     </nav>
 </template>

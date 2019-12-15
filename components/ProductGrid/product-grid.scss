@@ -51,19 +51,5 @@
       font-weight: bold;
       padding-bottom: 20px;
     }
-
-    .button {
-      cursor: pointer;
-      color: black;
-      background-color: var(--color-accent);
-      border-radius: var(--radius-m);
-      padding: 5px;
-      font-size: var(--font-size-l);
-
-      &:hover {
-        color: black;
-        background-color: var(--color-accent-dark);
-      }
-    }
   }
 }
