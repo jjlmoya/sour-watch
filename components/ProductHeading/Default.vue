@@ -14,13 +14,16 @@
                     </h1>
                     <div class="product-heading__details">
                         <div v-if="product.discount" class="discount">
-                            -{{ product.discount }}%
+                            {{ product.legal ? `-${product.discount}%` : 'PROMO' }}
+                        </div>
+                        <div v-if="product.discount" class="gift">
+                            <span class="tooltip">Open your gift</span> <img src="icons/gift.svg">
                         </div>
                         <div class="price">
-                            <div v-if="product.discount" class="price--old">
+                            <div v-if="product.discount && product.legalAdvice" class="price--old">
                                 {{ getCurrency(product.price) }}
                             </div>
-                            {{ getCurrency(getDiscountPrice(product.price, product.discount)) }}
+                            {{ `${product.legalAdvice ? getCurrency(getDiscountPrice(product.price, product.discount)) : getCurrency(product.price) } ` }}
                         </div>
                         <div class="availability">
                             В наличии <span :class="product.stock === 0 ? 'error' : product.stock > 2 ? 'info' : 'warning' ">{{ product.stock }} часов </span>

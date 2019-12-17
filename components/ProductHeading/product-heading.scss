@@ -25,6 +25,7 @@
     font-size: var(--font-size-xl);
 
     .discount {
+      display: none;
       position: absolute;
       right: -20px;
       top: 0;
@@ -79,6 +80,36 @@
       opacity: 0.5;
       line-height: 18px;
       word-spacing: 2px;
+    }
+  }
+
+  .gift {
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    background-color: var(--color-info);
+    padding: 0 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 45px;
+    box-shadow: 0 0 0 0 rgba(#5a99d4, 0.5);
+    animation: pulse 1.5s infinite;
+
+    .tooltip {
+      color: white;
+      text-align: left;
+      padding: 5px 10px;
+      font-size: 14px;
+    }
+
+    &:hover {
+      background-color: var(--color-secondary);
+    }
+
+    img {
+      width: 30px;
     }
   }
 
