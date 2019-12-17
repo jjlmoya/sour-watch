@@ -5,11 +5,11 @@
                 <div class="product-heading__info">
                     <h1 class="product-heading__title">
                         <div class="title">
-                            {{ product.collection }},
+                            Часы {{ product.brand }}
                             <span class="f-strong">{{ product.model }}</span>
                         </div>
                         <div class="subtitle">
-                            ({{ product.brand }})
+                            ({{ product.collection }})
                         </div>
                     </h1>
                     <div class="product-heading__details">
