@@ -2,6 +2,7 @@
     <nav class="megamenu megamenu--default">
         <div v-for="collection in collections" :key="collection.slug" class="megamenu__element">
             <router-link
+                class="link"
                 :to="`/collekciya/${collection.slug}`"
             >
                 {{ collection.name }}
@@ -14,53 +15,14 @@
 </style>
 
 <script>
+    import { mapState } from 'vuex'
+
     export default {
         name: 'MegaMenu',
         computed: {
-            collections: () => {
-                return [
-                    {
-                        name: 'Ундина',
-                        slug: 'undina'
-                    },
-                    {
-                        name: 'Эверест',
-                        slug: 'everest'
-                    },
-                    {
-                        name: 'Экраноплан',
-                        slug: 'ekranoplan'
-                    },
-                    {
-                        name: 'Энергия',
-                        slug: 'energy'
-                    },
-                    {
-                        name: 'Луноход-2',
-                        slug: 'lunokhod-2'
-                    },
-                    {
-                        name: 'Алмаз',
-                        slug: 'almaz'
-                    },
-                    {
-                        name: 'Анчар',
-                        slug: 'anchar'
-                    },
-                    {
-                        name: 'Лимузин',
-                        slug: 'gaz-14-limusin'
-                    },
-                    {
-                        name: 'Ракета №1',
-                        slug: 'raketa-n1'
-                    },
-                    {
-                        name: 'Экспедиция',
-                        slug: 'expedition'
-                    }
-                ]
-            }
+            ...mapState({
+                collections: state => state.collection.list
+            })
         }
     }
 </script>
