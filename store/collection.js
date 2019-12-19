@@ -1,4 +1,3 @@
-
 export const state = () => ({
     list: [],
     selected: {}
@@ -9,8 +8,6 @@ export const mutations = {
         state.list = collection
     },
     set (state, collection) {
-        console.log(collection)
-        console.log(state.list)
         state.selected = state.list.find(c => c.slug === collection)
     },
     add (state, value) {
@@ -31,7 +28,6 @@ export const actions = {
             })
     },
     set ({ commit }) {
-        console.log(commit)
         commit('setSelected', this.store.list.find(c => c.name === 1))
     }
 }

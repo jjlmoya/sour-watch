@@ -1,8 +1,14 @@
 <template>
     <div class="home">
         <Layout>
+            <Inspirational :image="collection.image" />
             <h1 style="color: white;">
-                Buy {{ collection.name }}
+                <div>Buy {{ collection.name }}</div>
+                <div>{{ collection.description }}</div>
+                <div>{{ collection.image }}</div>
+                <div>{{ collection.slug }}</div>
+                <div>{{ collection.weight }}</div>
+                <div>{{ collection.banDiscount }}</div>
             </h1>
         </Layout>
     </div>
@@ -11,11 +17,13 @@
 <script>
     import { mapState } from 'vuex'
     import Layout from '@/layouts/Default.vue'
+    import Inspirational from '@/components/Inspirational/Default.vue'
 
     export default {
         name: 'Collection',
         components: {
-            Layout
+            Layout,
+            Inspirational
         },
         validate ({ params }) {
             return !!params.id
