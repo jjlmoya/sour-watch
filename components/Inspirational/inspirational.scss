@@ -1,3 +1,9 @@
+@keyframes color {
+  0% { color: white; }
+  50% { color: #ff000a; }
+  100% { color: white; }
+}
+
 .inspirational {
   position: relative;
   width: 100%;
@@ -12,6 +18,24 @@
     bottom: 0;
     right: 0;
     object-fit: cover;
+  }
+
+  &__title {
+    font-size: var(--font-size-12xl);
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    color: white;
+    letter-spacing: 2px;
+    font-weight: bold;
+
+    .first-letter {
+      animation: color 10s ease-in infinite;
+      color: var(--color-primary);
+    }
   }
 
   @include breakpoint(s) {

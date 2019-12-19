@@ -1,7 +1,10 @@
 <template>
     <div class="home">
         <Layout>
-            <Inspirational :image="collection.image" />
+            <Inspirational
+                :image="collection.image"
+                :title="collection.name"
+            />
             <h1 style="color: white;">
                 <div>Buy {{ collection.name }}</div>
                 <div>{{ collection.description }}</div>
