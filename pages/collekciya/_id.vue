@@ -41,12 +41,12 @@
         },
         head () {
             return {
-                title: 'Vostok Europa - ' + this.id,
+                title: `Discover collection ${this.collection.name} | Vostok Europe`,
                 meta: [
                     {
                         hid: 'description',
                         name: 'description',
-                        content: 'My custom description'
+                        content: `Discover collection ${this.collection.name} | Vostok Europe`
                     }
                 ]
             }
