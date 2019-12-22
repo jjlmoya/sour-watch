@@ -6,7 +6,6 @@
             {{ `${title.slice(1)}` }}
         </h1>
     </div>
-    </div>
 </template>
 <style lang="scss">@import 'inspirational.scss';
 </style>
