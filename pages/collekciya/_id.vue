@@ -5,7 +5,7 @@
                 :image="collection.image"
                 :title="collection.name"
             />
-            <CommonsDescription class="commons-description" :description="collection.description" />
+            <CommonsText :title="`Por qué vestir ${collection.name}`" :description="collection.description" />
             <h1 style="color: white;">
                 <div>Buy {{ collection.name }}</div>
 
@@ -22,14 +22,14 @@
     import { mapState } from 'vuex'
     import Layout from '@/layouts/Default.vue'
     import Inspirational from '@/components/Inspirational/Default.vue'
-    import CommonsDescription from '@/components/Commons/Description.vue'
+    import CommonsText from '@/components/Commons/Text.vue'
 
     export default {
         name: 'Collection',
         components: {
             Layout,
             Inspirational,
-            CommonsDescription
+            CommonsText
         },
         validate ({ params }) {
             return !!params.id
