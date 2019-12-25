@@ -5,7 +5,7 @@
                 :image="collection.image"
                 :title="collection.name"
             />
-            <CommonsText :title="`Por qué vestir ${collection.name}`" :description="collection.description" />
+            <CommonsText :title="`Por qué vestir ${collection.name }`" :description="collection.description" />
             <h1 style="color: white;">
                 <div>Buy {{ collection.name }}</div>
 

@@ -2,7 +2,7 @@
     <div class="home" :class="theme">
         <Layout>
             <Slider />
-            <ProductGrid />
+            <ProductGrid :products="products" />
         </Layout>
     </div>
 </template>
@@ -23,7 +23,10 @@
         computed: {
             ...mapState('theme', [
                 'theme'
-            ])
+            ]),
+            ...mapState({
+                products: state => state.watches.list
+            })
         },
         created () {
             this.$store.commit('theme/set', 'vostok')
