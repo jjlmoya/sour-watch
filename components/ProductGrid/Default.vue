@@ -1,24 +1,31 @@
 <template>
-    <nav class="product-grid product-grid--default">
-        <div v-for="product in products" :key="product.model" class="product-grid__element">
-            <a :href="getUri(product.model)">
-                <img class="element__image" :src="getMainImage(product.images)">
-                <div class="title">
-                    {{ product.collection }}
-                </div>
-                <div :if="product.brand" class="brand">
-                    {{ product.brand }}
-                </div>
-                <span class="model" :href="getUri(product.model)">
-                    {{ product.model }}
-                </span>
-                <div class="price">
-                    {{ getCurrency(product.price) }}
-                </div>
-            </a>
-            <a class="button button--ghost button--secondary button--s" :href="product.url">{{ buy }}</a>
+    <div v-if="products.length > 0" class="product-grid product-grid--default">
+        <div class="product-grid__title">
+            <h2 v-if="title">
+                {{ title }}
+            </h2>
         </div>
-    </nav>
+        <div class="product-grid__container">
+            <div v-for="product in products" :key="product.model" class="product-grid__element">
+                <a :href="getUri(product.model)">
+                    <img class="element__image" :src="getMainImage(product.images)">
+                    <div v-if="product.collection" class="title">
+                        {{ product.collection }}
+                    </div>
+                    <div :if="product.brand" class="brand">
+                        {{ product.brand }}
+                    </div>
+                    <span class="model" :href="getUri(product.model)">
+                        {{ product.model }}
+                    </span>
+                    <div class="price">
+                        {{ getCurrency(product.price) }}
+                    </div>
+                </a>
+                <a class="button button--ghost button--secondary button--s" :href="product.url">{{ buy }}</a>
+            </div>
+        </div>
+    </div>
 </template>
 
 <style lang="scss">@import 'product-grid.scss';

@@ -5,15 +5,8 @@
                 :image="collection.image"
                 :title="collection.name"
             />
-            <CommonsText :title="`Por qué vestir ${collection.name }`" :description="collection.description" />
-            <h1 style="color: white;">
-                <div>Buy {{ collection.name }}</div>
-
-                <div>{{ collection.image }}</div>
-                <div>{{ collection.slug }}</div>
-                <div>{{ collection.weight }}</div>
-                <div>{{ collection.banDiscount }}</div>
-            </h1>
+            <CommonsText :title="`Por qué vestir ${collection.name}`" :description="collection.description" />
+            <ProductGrid :products="watches" :title="`Compra relojes de la collección ${collection.name}`" />
         </Layout>
     </div>
 </template>
@@ -23,13 +16,15 @@
     import Layout from '@/layouts/Default.vue'
     import Inspirational from '@/components/Inspirational/Default.vue'
     import CommonsText from '@/components/Commons/Text.vue'
+    import ProductGrid from '@/components/ProductGrid/Default.vue'
 
     export default {
         name: 'Collection',
         components: {
             Layout,
             Inspirational,
-            CommonsText
+            CommonsText,
+            ProductGrid
         },
         validate ({ params }) {
             return !!params.id
@@ -40,7 +35,8 @@
             },
             ...mapState({
                 collection: state => state.collection.selected
-            })
+            }),
+            watches () { return this.collection.watches }
         },
         head () {
             return {

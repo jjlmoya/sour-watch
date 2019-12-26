@@ -2,7 +2,9 @@
     <div class="home" :class="theme">
         <Layout>
             <Slider />
-            <ProductGrid :products="products" />
+            <ProductGrid :products="products" :title="'Nuevos Relojes'" />
+            <ProductGrid :products="products" :title="'Los más buscados'" />
+            <ProductGrid :products="products" :title="'Los más comprados'" />
         </Layout>
     </div>
 </template>
@@ -35,7 +37,6 @@
             return {
                 title: 'Vostok Europa',
                 meta: [
-                    // hid is used as unique identifier. Do not use `vmid` for it as it will not work
                     {
                         hid: 'description',
                         name: 'description',
