@@ -1,46 +1,50 @@
 <template>
     <div class="product-properties product-properties--detail">
-        <h2> Características del Reloj: </h2>
+        <h2 class="product-properties__title">
+            Características del Reloj
+        </h2>
         <Double>
             <template slot="left">
                 <Specifications
                     :specifications="[{
-                                          name: 'Gender',
-                                          value: product.gender
-                                      }, {
-                                          name: 'Mechanism',
-                                          value: product.mechanism
-                                      }, {
-                                          name: 'Calibre',
-                                          value: product.calibre
-                                      }, {
-                                          name: 'Origin',
-                                          value: product.mechanismOrigin
-                                      }, {
-                                          name: 'watchCase',
-                                          value: product.watchCase
-                                      }, {
-                                          name: 'waterResitant',
-                                          value: product.waterResistant
-                                      }, {
-                                          name: 'width',
-                                          value: product.width
-                                      }, {
-                                          name: 'height',
-                                          value: product.height
-                                      }, {
-                                          name: 'thickness',
-                                          value: product.thickness
-                                      }, {
-                                          name: 'glass',
-                                          value: product.glass
-                                      },
-                                      ... getProductProperties(product.properties)
+                        name: 'Gender',
+                        value: product.gender
+                    }, {
+                        name: 'Mechanism',
+                        value: product.mechanism
+                    }, {
+                        name: 'Calibre',
+                        value: product.calibre
+                    }, {
+                        name: 'Origin',
+                        value: product.mechanismOrigin
+                    }, {
+                        name: 'watchCase',
+                        value: product.watchCase
+                    }, {
+                        name: 'waterResitant',
+                        value: product.waterResistant
+                    }, {
+                        name: 'width',
+                        value: product.width
+                    }, {
+                        name: 'height',
+                        value: product.height
+                    }, {
+                        name: 'thickness',
+                        value: product.thickness
+                    }, {
+                        name: 'glass',
+                        value: product.glass
+                    }
                     ]"
                 />
             </template>
             <template slot="right">
-                <span> c</span>
+                <Specifications
+                    :specifications="[... getProductProperties(product.properties)
+                    ]"
+                />
             </template>
         </Double>
     </div>
