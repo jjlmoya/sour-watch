@@ -32,16 +32,15 @@
       &__heading {
         background: transparent;
         color: var(--color-text);
-
-        &::after {
-          content: ':';
-          padding-right: 5px;
-          margin-left: -3px;
-        }
       }
 
       &__value {
         border: none;
+
+        &::before {
+          content: ':';
+          padding-right: 5px;
+        }
       }
     }
   }

@@ -82,7 +82,7 @@
                 return properties.map((property) => {
                     return {
                         name: property.name,
-                        value: property.WatchProperty.value || 'DA'
+                        value: property.WatchProperty.value
                     }
                 })
             }
