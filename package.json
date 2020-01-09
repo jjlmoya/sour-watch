@@ -1,7 +1,7 @@
 {
-    "name": "easy-vitae",
+    "name": "sour-watch",
     "version": "1.0.0",
-    "description": "Generador de CV",
+    "description": "Sour Watch, Sour time",
     "author": "jjlmoya",
     "private": true,
     "scripts": {

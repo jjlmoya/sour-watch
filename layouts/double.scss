@@ -1,0 +1,33 @@
+.l-double {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  &__area {
+    width: 100%;
+    min-height: 300px;
+  }
+
+  &__left {
+    order: 0;
+  }
+
+  &__right {
+    order: 1;
+  }
+
+  &--2-1 {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  &--3-1 {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  &--1-2 {
+    grid-template-columns: 1fr 2fr;
+  }
+
+  &--1-3 {
+    grid-template-columns: 1fr 2fr;
+  }
+}

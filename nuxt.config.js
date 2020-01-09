@@ -6,8 +6,8 @@ export default {
      ** Headers of the page
      */
     router: {
-        base: '/easy-vitae/',
-        middleware: 'page'
+        base: '/sour-watch/',
+        middleware: 'product'
     },
     head: {
         title: process.env.npm_package_name || '',

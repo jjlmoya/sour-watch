@@ -1,27 +1,46 @@
 <template>
     <div class="home" :class="theme">
         <Layout>
-            Hola
+            <Slider />
+            <ProductGrid :products="products" :title="'Nuevos Relojes'" />
+            <ProductGrid :products="products" :title="'Los más buscados'" />
+            <ProductGrid :products="products" :title="'Los más comprados'" />
         </Layout>
     </div>
 </template>
 
 <script>
+    import { mapState } from 'vuex'
     import Layout from '@/layouts/Default.vue'
+    import Slider from '@/components/Slider/Default.vue'
+    import ProductGrid from '@/components/ProductGrid/Default.vue'
 
     export default {
         name: 'Home',
         components: {
-            Layout
+            Layout,
+            Slider,
+            ProductGrid
+        },
+        computed: {
+            ...mapState('theme', [
+                'theme'
+            ]),
+            ...mapState({
+                products: state => state.watches.list
+            })
+        },
+        created () {
+            this.$store.commit('theme/set', 'vostok')
         },
         head () {
             return {
-                title: 'Generador de Currículum Vitae',
+                title: 'Vostok Europa',
                 meta: [
                     {
                         hid: 'description',
                         name: 'description',
-                        content: 'Generador de Currículum Vitae'
+                        content: 'My custom description'
                     }
                 ]
             }

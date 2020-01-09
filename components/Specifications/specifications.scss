@@ -1,0 +1,47 @@
+.specifications {
+  margin-top: 20px;
+
+  &__heading {
+    text-align: left;
+    padding: 5px 10px;
+    background-color: #444;
+    color: white;
+  }
+
+  &__value {
+    border-bottom: 1px solid black;
+    padding: 5px 10px;
+    color: black;
+  }
+
+  &--text {
+    .specifications {
+      &__row {
+        display: inline-block;
+        width: 100%;
+        line-height: 25px;
+        padding: 0 20px;
+      }
+
+      &__value,
+      &__heading {
+        padding: 0;
+        min-width: 15;
+      }
+
+      &__heading {
+        background: transparent;
+        color: var(--color-text);
+      }
+
+      &__value {
+        border: none;
+
+        &::before {
+          content: ':';
+          padding-right: 5px;
+        }
+      }
+    }
+  }
+}
