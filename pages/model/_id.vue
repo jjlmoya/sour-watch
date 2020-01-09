@@ -1,7 +1,7 @@
 <template>
-    <div class="home" :class="theme">
+    <div class="home">
         <Layout>
-            Hola
+            {{ id }}
         </Layout>
     </div>
 </template>
@@ -10,18 +10,27 @@
     import Layout from '@/layouts/Default.vue'
 
     export default {
-        name: 'Home',
+        name: 'Watch',
         components: {
             Layout
         },
+        validate ({ params }) {
+            return !!params.id
+        },
+        computed: {
+            id () {
+                return this.$route.params.id
+            }
+        },
         head () {
             return {
-                title: 'Generador de Currículum Vitae',
+                title: `${this.id} - Currículum`,
                 meta: [
+                    // hid is used as unique identifier. Do not use `vmid` for it as it will not work
                     {
                         hid: 'description',
                         name: 'description',
-                        content: 'Generador de Currículum Vitae'
+                        content: 'Currículum'
                     }
                 ]
             }

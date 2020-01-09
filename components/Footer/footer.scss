@@ -5,35 +5,6 @@ $footer-border-color: rgba(255, 255, 255, 0.3);
   color: white;
   padding: 0 20px;
 
-  &__wrapper {
-    display: grid;
-    width: 100%;
-    grid-template-columns: 1fr;
-
-    @include breakpoint(s) {
-      grid-template-columns: 1fr 1fr 2fr;
-    }
-  }
-
-  &-links,
-  &-static,
-  &-contact {
-    text-align: center;
-    padding: 20px;
-
-    @include breakpoint(s) {
-      border-bottom: none;
-      border-right: 1px solid $footer-border-color;
-    }
-
-    border-bottom: 1px solid $footer-border-color;
-    display: grid;
-  }
-
-  &-contact {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
-
   &__copyright {
     font-size: var(--font-size-2xs);
     opacity: 0.3;
