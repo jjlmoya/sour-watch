@@ -1,5 +1,5 @@
 <template>
-    <div :is="tag" class="c-title">
+    <div :is="tag" class="c-title" :class="{ 'c-title--ghost' : ghost}">
         <span v-for="word in title.split(' ')" :key="word" class="c-title__word">
             {{ word }}
         </span>
@@ -20,6 +20,10 @@
             title: {
                 type: String,
                 default: ''
+            },
+            ghost: {
+                type: Boolean,
+                default: false
             }
         }
     }

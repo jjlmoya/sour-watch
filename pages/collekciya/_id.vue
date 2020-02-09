@@ -6,7 +6,7 @@
                 :title="collection.name"
             />
             <CommonsText :title="`Por qué vestir ${collection.name}`" :description="collection.description" />
-            <ProductGrid :products="watches" :title="`Compra relojes de la collección ${collection.name}`" />
+            <ProductGrid :products="watches" :title="`Los relojes de ${collection.name}`" />
         </Layout>
     </div>
 </template>

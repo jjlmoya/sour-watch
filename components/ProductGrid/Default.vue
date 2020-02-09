@@ -1,7 +1,7 @@
 <template>
     <div v-if="products.length > 0" class="product-grid product-grid--default">
         <div v-if="title" class="product-grid__title">
-            <Title :tag="'h3'" :title="title" />
+            <Title :tag="'h3'" :title="title" :ghost="true" />
         </div>
         <div class="product-grid__container">
             <div v-for="product in products" :key="product.model" class="product-grid__element">
