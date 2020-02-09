@@ -1,0 +1,13 @@
+.c-title {
+  font-size: var(--font-size-3xl);
+  padding: 20px 15px;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  word-spacing: -5px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  color: var(--colorprimary);
+
+  &__word:nth-child(even) {
+    color: var(--color-secondary);
+  }
+}

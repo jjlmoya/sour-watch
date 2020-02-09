@@ -1,9 +1,7 @@
 <template>
     <div v-if="products.length > 0" class="product-grid product-grid--default">
-        <div class="product-grid__title">
-            <h2 v-if="title">
-                {{ title }}
-            </h2>
+        <div v-if="title" class="product-grid__title">
+            <Title :tag="'h3'" :title="title" />
         </div>
         <div class="product-grid__container">
             <div v-for="product in products" :key="product.model" class="product-grid__element">
@@ -34,10 +32,14 @@
 <script>
     import { mapState } from 'vuex'
     import { business } from '@/data/literals'
+    import Title from '@/components/Commons/Title.vue'
     import CurrencyService from '@/services/currency.service'
     const currencyService = new CurrencyService({})
     export default {
         name: 'ProductGrid',
+        components: {
+            Title
+        },
         props: {
             products: {
                 type: Array,
