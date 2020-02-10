@@ -1,8 +1,8 @@
 <template>
     <div class="product-properties product-properties--detail">
-        <h2 class="product-properties__title">
-            Características del Reloj
-        </h2>
+        <div class="product-properties__title">
+            <Title :tag="'h2'" :title="`Características del modelo ${product.model}`" />
+        </div>
         <Double>
             <template slot="left">
                 <Specifications
@@ -57,13 +57,16 @@
     import { business } from '@/data/literals'
     import Double from '@/layouts/Double.vue'
     import Specifications from '@/components/Specifications/Default.vue'
+    import Title from '@/components/Commons/Title.vue'
+
     import CurrencyService from '@/services/currency.service'
     const currencyService = new CurrencyService({})
     export default {
         name: 'ProductProperties',
         components: {
             Double,
-            Specifications
+            Specifications,
+            Title
         },
         props: {
             product: {
