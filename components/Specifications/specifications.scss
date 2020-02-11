@@ -1,5 +1,10 @@
 .specifications {
-  margin-top: 20px;
+  font-size: var(--font-size-m);
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 0 5px;
+  border-radius: 10px;
+  display: block;
 
   &__heading {
     text-align: left;
@@ -19,8 +24,7 @@
       &__row {
         display: inline-block;
         width: 100%;
-        line-height: 25px;
-        padding: 0 20px;
+        padding: 2px 20px;
       }
 
       &__value,
@@ -32,6 +36,8 @@
       &__heading {
         background: transparent;
         color: var(--color-text);
+        text-transform: uppercase;
+        letter-spacing: -1px;
       }
 
       &__value {
@@ -42,6 +48,23 @@
           padding-right: 5px;
         }
       }
+    }
+  }
+
+  &--cloud {
+    background-color: rgb(255, 255, 255);
+
+    .specifications__row {
+      display: flex;
+    }
+
+    .specifications__heading {
+      text-transform: uppercase;
+      border: 2px dashed black;
+      padding: 5px;
+      background-color: white;
+      border-radius: 5px;
+      display: block;
     }
   }
 }

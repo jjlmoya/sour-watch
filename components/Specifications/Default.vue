@@ -1,5 +1,5 @@
 <template>
-    <table class="specifications specifications--text">
+    <table class="specifications specifications--text" :class="{ 'specifications--cloud' : cloud}">
         <tbody class="specifications__table">
             <tr v-for="specification in specs" :key="specification.name" class="specifications__row">
                 <th class="specifications__heading">
@@ -20,6 +20,10 @@
             specifications: {
                 type: Array,
                 default: () => []
+            },
+            cloud: {
+                type: Boolean,
+                default: false
             }
         },
         computed: {

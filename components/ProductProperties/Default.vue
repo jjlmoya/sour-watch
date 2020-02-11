@@ -42,8 +42,8 @@
             </template>
             <template slot="right">
                 <Specifications
-                    :specifications="[... getProductProperties(product.properties)
-                    ]"
+                    :cloud="true"
+                    :specifications="[...getProductProperties(product.properties)]"
                 />
             </template>
         </Double>
