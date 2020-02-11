@@ -52,7 +52,7 @@
   }
 
   &--cloud {
-    background-color: rgb(255, 255, 255);
+    background-color: var(--color-text-secondary);
 
     .specifications__row {
       display: flex;
@@ -60,9 +60,9 @@
 
     .specifications__heading {
       text-transform: uppercase;
-      border: 2px dashed black;
+      border: 2px dashed var(--color-text);
       padding: 5px;
-      background-color: white;
+      background-color: var(--color-text-secondary);
       border-radius: 5px;
       display: block;
     }
