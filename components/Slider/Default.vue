@@ -46,7 +46,6 @@
         },
         data: () => {
             return {
-
                 active: 0
             }
         },

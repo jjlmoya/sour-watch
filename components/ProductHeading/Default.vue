@@ -1,5 +1,12 @@
 <template>
     <div class="product-heading product-heading--default" :class="product.isNew ? 'is-new' : ''">
+        <Modal
+            :modifier="'abc'"
+            :active="showGift"
+            @updateModal="updateModal"
+        >
+            Hola
+        </Modal>
         <Double :columns="'1-1'">
             <template slot="right">
                 <div class="product-heading__info">
@@ -16,7 +23,7 @@
                         <div v-if="product.discount" class="discount">
                             {{ product.legal ? `-${product.discount}%` : 'PROMO' }}
                         </div>
-                        <div v-if="product.discount" class="gift">
+                        <div v-if="product.discount" class="gift" @click="toggleGift">
                             <span class="tooltip">Open your gift</span> <img src="icons/gift.svg">
                         </div>
                         <div class="price">
@@ -79,13 +86,15 @@
     import CurrencyService from '@/services/currency.service'
     import Double from '@/layouts/Double.vue'
     import Slider from '@/components/Slider/Default.vue'
+    import Modal from '@/components/Modal/Basic.vue'
 
     const currencyService = new CurrencyService({})
     export default {
         name: 'ProductHeading',
         components: {
             Double,
-            Slider
+            Slider,
+            Modal
         },
         props: {
             product: {
@@ -93,8 +102,14 @@
                 default: () => {}
             }
         },
+        data () {
+            return {
+                showGift: false
+            }
+        },
         computed: {
             buy: () => business.buy
+
         },
         methods: {
             getCurrency (price) {
@@ -102,6 +117,12 @@
             },
             getDiscountPrice (price, discount) {
                 return price - (price * (discount / 100))
+            },
+            toggleGift () {
+                this.showGift = true
+            },
+            updateModal (status) {
+                this.showGift = status
             }
         }
     }
