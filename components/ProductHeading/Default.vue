@@ -1,11 +1,11 @@
 <template>
     <div class="product-heading product-heading--default" :class="product.isNew ? 'is-new' : ''">
         <Modal
-            :modifier="'abc'"
+            :modifier="'c-modal--small c-modal--rounded'"
             :active="showGift"
             @updateModal="updateModal"
         >
-            Hola
+            <ModalPromo />
         </Modal>
         <Double :columns="'1-1'">
             <template slot="right">
@@ -87,6 +87,7 @@
     import Double from '@/layouts/Double.vue'
     import Slider from '@/components/Slider/Default.vue'
     import Modal from '@/components/Modal/Basic.vue'
+    import ModalPromo from '@/components/Modal/Promo.vue'
 
     const currencyService = new CurrencyService({})
     export default {
@@ -94,7 +95,8 @@
         components: {
             Double,
             Slider,
-            Modal
+            Modal,
+            ModalPromo
         },
         props: {
             product: {

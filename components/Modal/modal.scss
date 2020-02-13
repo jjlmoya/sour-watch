@@ -11,11 +11,26 @@
 
   &.is-active {
     display: grid;
+    justify-content: center;
+    align-items: center;
   }
 
   &__content {
     cursor: default;
     background-color: white;
     margin: 30px;
+    padding: 50px;
+  }
+
+  &--small {
+    .c-modal__content {
+      max-width: 500px;
+    }
+  }
+
+  &--rounded {
+    .c-modal__content {
+      border-radius: 5px;
+    }
   }
 }
