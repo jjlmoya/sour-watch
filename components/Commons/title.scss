@@ -13,7 +13,7 @@
   }
 
   &--ghost {
-    background-color: black;
+    background-color: var(--color-shade-19);
 
     .c-title__word:nth-child(even) {
       color: white;

@@ -74,7 +74,7 @@
 
   // Gray colors
   @for $i from 0 through 20 {
-    --color-shade-#{$i * 100}-hsl: 0, 0%, #{100 - ($i * 5)}#{'%'};
-    --color-shade-#{$i * 100}: #{'hsl(var(--color-shade-#{$i * 100}-hsl))'};
+    --color-shade-#{$i}-hsl: 0, 0%, #{100 - ($i * 5)}#{'%'};
+    --color-shade-#{$i}: #{'hsl(var(--color-shade-#{$i}-hsl))'};
   }
 }

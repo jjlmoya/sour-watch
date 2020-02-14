@@ -10,13 +10,13 @@
     text-align: left;
     padding: 5px 10px;
     background-color: #444;
-    color: white;
+    color: var(--color-shade-1);
   }
 
   &__value {
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid var(--color-shade-19);
     padding: 5px 10px;
-    color: black;
+    color: vvar(--color-text);
   }
 
   &--text {
