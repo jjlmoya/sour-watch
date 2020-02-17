@@ -9,7 +9,7 @@
                 />
             </div>
         </div>
-        <div class="slider__arrows">
+        <div v-if="images.length > 1" class="slider__arrows">
             <span class="arrow prev button button--ghost button--secondary" @click="move(-1)">
                 <img class="icon" src="icons/arrow.svg">
             </span>
@@ -17,7 +17,7 @@
                 <img class="icon" src="icons/arrow.svg">
             </span>
         </div>
-        <ul class="slider__dots">
+        <ul v-if="images.length > 1" class="slider__dots">
             <li
                 v-for="(dot, index) in images"
                 :key="index"
@@ -35,13 +35,7 @@
         props: {
             images: {
                 type: Array,
-                default: () => [
-                    {
-                        url: 'product/504.jpg'
-                    },
-                    {
-                        url: 'product/Almaz-1.jpg'
-                    }]
+                default: () => []
             }
         },
         data: () => {

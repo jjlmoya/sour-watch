@@ -46,6 +46,7 @@
     .price {
       font-weight: var(--font-weight-black);
       font-size: var(--font-size-xl);
+      display: flex;
 
       &--old {
         text-decoration: line-through;
@@ -85,30 +86,24 @@
 
   .gift {
     cursor: pointer;
-    position: absolute;
-    right: 0;
     background-color: var(--color-info);
-    padding: 0 10px;
-    border-radius: 5px;
+    margin: 0 10px;
+    padding: 0 5px;
+    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 45px;
+    align-self: center;
+    height: 30px;
+    width: 30px;
     animation: pulse 1.5s ease-out infinite;
-
-    .tooltip {
-      color: white;
-      text-align: left;
-      padding: 5px 10px;
-      font-size: 14px;
-    }
 
     &:hover {
       background-color: var(--color-secondary);
     }
 
     img {
-      width: 30px;
+      max-width: 100%;
     }
   }
 

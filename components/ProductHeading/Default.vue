@@ -23,14 +23,15 @@
                         <div v-if="product.discount" class="discount">
                             {{ product.legal ? `-${product.discount}%` : 'PROMO' }}
                         </div>
-                        <div v-if="product.discount" class="gift" @click="toggleGift">
-                            <span class="tooltip">Open your gift</span> <img src="icons/gift.svg">
-                        </div>
+
                         <div class="price">
                             <div v-if="product.discount && product.legalAdvice" class="price--old">
                                 {{ getCurrency(product.price) }}
                             </div>
                             {{ `${product.legalAdvice ? getCurrency(getDiscountPrice(product.price, product.discount)) : getCurrency(product.price) } ` }}
+                            <div v-if="product.discount" class="gift" @click="toggleGift">
+                                <img src="icons/gift.svg">
+                            </div>
                         </div>
                         <div class="availability">
                             В наличии <span :class="product.stock === 0 ? 'error' : product.stock > 2 ? 'info' : 'warning' ">{{ product.stock }} часов </span>
@@ -39,9 +40,11 @@
                             {{ product.description }}
                         </div>
                         <div class="product-heading__buttons">
-                            <button class="button button--secondary button--s">
-                                Продолжить
-                            </button>
+                            <router-link to="/">
+                                <button class="button button--secondary button--s">
+                                    Купить
+                                </button>
+                            </router-link>
                         </div>
                     </div>
                     <div style="display: none;">
