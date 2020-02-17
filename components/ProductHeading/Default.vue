@@ -40,7 +40,7 @@
                             {{ product.description }}
                         </div>
                         <div class="product-heading__buttons">
-                            <router-link to="/">
+                            <router-link :to="{ name:'checkout-id', params: { id:product.model }}">
                                 <button class="button button--secondary button--s">
                                     Купить
                                 </button>

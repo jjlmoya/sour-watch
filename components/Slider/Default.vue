@@ -9,7 +9,7 @@
                 />
             </div>
         </div>
-        <div v-if="images.length > 1" class="slider__arrows">
+        <div v-if="images.length" class="slider__arrows">
             <span class="arrow prev button button--ghost button--secondary" @click="move(-1)">
                 <img class="icon" src="icons/arrow.svg">
             </span>
@@ -35,7 +35,13 @@
         props: {
             images: {
                 type: Array,
-                default: () => []
+                default: () => [
+                    {
+                        url: 'product/504.jpg'
+                    },
+                    {
+                        url: 'product/Almaz-1.jpg'
+                    }]
             }
         },
         data: () => {

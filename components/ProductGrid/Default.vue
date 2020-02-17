@@ -5,7 +5,7 @@
         </div>
         <div class="product-grid__container">
             <div v-for="product in products" :key="product.model" class="product-grid__element">
-                <a :href="getUri(product.model)">
+                <router-link :to="{ name:'chasy-id', params: {id: product.model} }">
                     <img class="element__image" :src="getMainImage(product.images)">
                     <div v-if="product.collection" class="title">
                         {{ product.collection }}
@@ -19,8 +19,10 @@
                     <div class="price">
                         {{ getCurrency(product.price) }}
                     </div>
-                </a>
-                <a class="button button--ghost button--secondary button--s" :href="product.url">{{ buy }}</a>
+                </router-link>
+                <nuxt-link :to="{ name:'checkout-id', params: {id: product.model} }" class="button button--ghost button--secondary button--s">
+                    {{ buy }}
+                </nuxt-link>
             </div>
         </div>
     </div>

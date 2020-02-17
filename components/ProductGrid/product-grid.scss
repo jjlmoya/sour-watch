@@ -1,5 +1,5 @@
 .product-grid {
-  background-color: white;
+  background-color: var(--color-shade-0);
   width: 90%;
   margin: 75px auto;
 
@@ -17,7 +17,7 @@
 
   &__element {
     padding: 20px;
-    background-color: white;
+    background-color: var(--color-shade-0);
     min-width: 250px;
     display: grid;
     box-shadow: var(--shadow-close);
