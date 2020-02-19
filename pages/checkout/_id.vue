@@ -1,6 +1,20 @@
 <template>
-    <div class="home">
+    <div class="checkout">
         <Layout>
+            <form class="">
+                <div class="">
+                    <label>Nombre</label>
+                    <input class="c-input" type="text" placeholder="Nombre">
+                </div>
+                <div class="">
+                    <label>Email</label>
+                    <input class="c-input" type="email" placeholder="Email">
+                </div>
+                <div class="">
+                    <label>Phone</label>
+                    <input class="c-input" type="phone" placeholder="Teléfoo">
+                </div>
+            </form>
             Test {{ product }}
         </Layout>
     </div>
