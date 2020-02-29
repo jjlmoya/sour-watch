@@ -1,21 +1,16 @@
 <template>
     <div class="checkout">
         <Layout>
-            <form class="">
-                <div class="">
-                    <label>Nombre</label>
-                    <input class="c-input" type="text" placeholder="Nombre">
-                </div>
-                <div class="">
-                    <label>Email</label>
-                    <input class="c-input" type="email" placeholder="Email">
-                </div>
-                <div class="">
-                    <label>Phone</label>
-                    <input class="c-input" type="phone" placeholder="Teléfoo">
-                </div>
-            </form>
-            Test {{ product }}
+            <Double>
+                <template slot="left">
+                    <form class="checkout__form">
+                        <Client />
+                    </form>
+                </template>
+                <template slot="right">
+                    Test {{ product }}
+                </template>
+            </Double>
         </Layout>
     </div>
 </template>
@@ -23,6 +18,9 @@
 <script>
     import { mapState } from 'vuex'
     import Layout from '@/layouts/Default.vue'
+    import Double from '@/layouts/Double.vue'
+    import Client from '@/components/Forms/Client.vue'
+
     import CurrencyService from '@/services/currency.service'
 
     const currencyService = new CurrencyService({})
@@ -30,7 +28,9 @@
     export default {
         name: 'Checkout',
         components: {
-            Layout
+            Layout,
+            Double,
+            Client
         },
         validate ({ params }) {
             return !!params.id

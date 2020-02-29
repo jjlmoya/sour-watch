@@ -1,9 +1,5 @@
-
-export const state = () => ({
-    list: [],
-    selected: {},
-    watch: {}
-})
+import LoggerService from '@/services/logger.service'
+const loggerService = new LoggerService({ page: 'middleware watches', level: 'info' })
 
 export const mutations = {
     setProducts (state, watch) {
@@ -33,6 +29,7 @@ export const actions = {
             })
     },
     setWatch ({ commit }) {
+        loggerService.log('commit', commit)
         commit('setSelected', this.store.watch.find(w => w.id === 1))
     }
 }
