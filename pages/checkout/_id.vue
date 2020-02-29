@@ -15,6 +15,9 @@
     </div>
 </template>
 
+<style lang="scss">@import 'checkout.scss';
+</style>
+
 <script>
     import { mapState } from 'vuex'
     import Layout from '@/layouts/Default.vue'

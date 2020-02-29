@@ -1,0 +1,13 @@
+.checkout {
+  &__form {
+    border-right: 1px solid black;
+  }
+
+  .l-default__content {
+    margin: 10px 20px;
+    background-color: white;
+    border-radius: 2px;
+    height: 100%;
+    padding: 20px;
+  }
+}
