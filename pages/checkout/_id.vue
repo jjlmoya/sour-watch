@@ -4,7 +4,59 @@
             <Double>
                 <template slot="left">
                     <form class="checkout__form">
-                        <Client />
+                        <Form :title="'Datos Personales'">
+                            <Input
+                                :label="'Nombre:'"
+                                :type="'text'"
+                                :modifier="'name'"
+                                :placeholder="'Nombre'"
+                            />
+                            <Input
+                                :label="'Teléfono:'"
+                                :type="'phone'"
+                                :modifier="'phone'"
+                                :placeholder="'Teléfono'"
+                            />
+                            <Input
+                                :label="'Email:'"
+                                :type="'email'"
+                                :modifier="'email'"
+                                :placeholder="'Email'"
+                            />
+                            <Input
+                                :label="'Confirmar Email:'"
+                                :type="'email'"
+                                :modifier="'email'"
+                                :placeholder="'Confirmar Email'"
+                            />
+                        </Form>
+                        <Form :title="'Datos de Pago'">
+                            <Tabs />
+                            <Input
+                                :label="'Nombre:'"
+                                :type="'text'"
+                                :modifier="'name'"
+                                :placeholder="'Nombre'"
+                            />
+                            <Input
+                                :label="'Teléfono:'"
+                                :type="'phone'"
+                                :modifier="'phone'"
+                                :placeholder="'Teléfono'"
+                            />
+                            <Input
+                                :label="'Email:'"
+                                :type="'email'"
+                                :modifier="'email'"
+                                :placeholder="'Email'"
+                            />
+                            <Input
+                                :label="'Confirmar Email:'"
+                                :type="'email'"
+                                :modifier="'email'"
+                                :placeholder="'Confirmar Email'"
+                            />
+                        </Form>
                     </form>
                 </template>
                 <template slot="right">
@@ -22,8 +74,9 @@
     import { mapState } from 'vuex'
     import Layout from '@/layouts/Default.vue'
     import Double from '@/layouts/Double.vue'
-    import Client from '@/components/Forms/Client.vue'
-
+    import Form from '@/components/Forms/Form.vue'
+    import Input from '@/components/Forms/Input.vue'
+    import Tabs from '@/components/Tabs/Default.vue'
     import CurrencyService from '@/services/currency.service'
 
     const currencyService = new CurrencyService({})
@@ -33,7 +86,9 @@
         components: {
             Layout,
             Double,
-            Client
+            Form,
+            Input,
+            Tabs
         },
         validate ({ params }) {
             return !!params.id
