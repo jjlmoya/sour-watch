@@ -17,6 +17,7 @@
     import Inspirational from '@/components/Inspirational/Default.vue'
     import CommonsText from '@/components/Commons/Text.vue'
     import ProductGrid from '@/components/ProductGrid/Default.vue'
+    import SeoService from '@/services/seo.service'
 
     export default {
         name: 'Collection',
@@ -39,16 +40,11 @@
             watches () { return this.collection.watches }
         },
         head () {
-            return {
-                title: `Discover collection ${this.collection.name} | Vostok Europe`,
-                meta: [
-                    {
-                        hid: 'description',
-                        name: 'description',
-                        content: `Discover collection ${this.collection.name} | Vostok Europe`
-                    }
-                ]
-            }
+            const SEO_PAGE_DATA = new SeoService({
+                title: `Discover collection ${this.collection.name}`,
+                description: `Discover collection ${this.collection.name}`
+            })
+            return SEO_PAGE_DATA.getMetas()
         }
     }
 </script>

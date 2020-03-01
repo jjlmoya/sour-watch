@@ -14,6 +14,11 @@
     import Layout from '@/layouts/Default.vue'
     import Slider from '@/components/Slider/Default.vue'
     import ProductGrid from '@/components/ProductGrid/Default.vue'
+    import SeoService from '@/services/seo.service'
+    const SEO_PAGE_DATA = new SeoService({
+        title: 'Home',
+        description: 'Home Description'
+    })
 
     export default {
         name: 'Home',
@@ -34,16 +39,7 @@
             this.$store.commit('theme/set', 'vostok')
         },
         head () {
-            return {
-                title: 'Vostok Europa',
-                meta: [
-                    {
-                        hid: 'description',
-                        name: 'description',
-                        content: 'My custom description'
-                    }
-                ]
-            }
+            return SEO_PAGE_DATA.getMetas()
         }
     }
 </script>

@@ -1,6 +1,21 @@
 .tabs {
+  display: grid;
+  width: 100%;
+
   &__navigation {
     display: flex;
+    border-bottom: 1px solid black;
+    margin: 10px 0;
+
+    &-element {
+      text-transform: capitalize;
+      padding: 5px 10px;
+      font-size: var(--font-size-xs);
+
+      &.is-active {
+        border-bottom: 1px solid black;
+      }
+    }
   }
 
   &__contents {

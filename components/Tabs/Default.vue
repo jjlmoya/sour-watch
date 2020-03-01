@@ -2,6 +2,7 @@
     <div class="tabs">
         <nav class="tabs__navigation">
             <div
+                class="tabs__navigation-element"
                 v-for="tab in tabs"
                 :key="tab.id"
                 :class="{'is-active': show == tab.id}"
@@ -15,7 +16,9 @@
                     v-for="tab in tabs"
                     :key="tab.id"
                 >
-                    <span v-if="show == tab.id">{{ tab.content }}</span>
+                    <div v-if="show === tab.id" class="tabs__content-element">
+                        {{ tab.content }}
+                    </div>
                 </div>
             </transition-group>
         </div>
@@ -28,21 +31,26 @@
 <script>
     export default {
         name: 'Tabs',
-        data () {
-            return {
-                show: 0,
-                tabs: [
+        props: {
+            tabs: {
+                type: Array,
+                default: () => [
                     {
                         id: 'p1',
-                        title: 'P1',
+                        title: 'Oplata 1',
                         content: 'P1C'
                     },
                     {
                         id: 'p2',
-                        title: 'P2',
+                        title: 'Oplata 2',
                         content: 'P2C'
                     }
                 ]
+            }
+        },
+        data () {
+            return {
+                show: 0
             }
         },
         methods: {

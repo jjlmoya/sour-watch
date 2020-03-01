@@ -78,6 +78,7 @@
     import Input from '@/components/Forms/Input.vue'
     import Tabs from '@/components/Tabs/Default.vue'
     import CurrencyService from '@/services/currency.service'
+    import SeoService from '@/services/seo.service'
 
     const currencyService = new CurrencyService({})
 
@@ -102,17 +103,11 @@
             })
         },
         head () {
-            return {
+            const SEO_PAGE_DATA = new SeoService({
                 title: `${this.product.brand} ${this.product.model} ${this.product.collection} por sólo ${currencyService.get(this.product.price)}`,
-                meta: [
-                    // hid is used as unique identifier. Do not use `vmid` for it as it will not work
-                    {
-                        hid: 'description',
-                        name: 'description',
-                        content: `Compra tu reloj ${this.product.brand} ${this.product.model} ${this.product.collection} por tan sólo ${currencyService.get(this.product.price)} y disfruta de una pieza de un valor exquisito`
-                    }
-                ]
-            }
+                description: `Compra tu reloj ${this.product.brand} ${this.product.model} ${this.product.collection} por tan sólo ${currencyService.get(this.product.price)} y disfruta de una pieza de un valor exquisito`
+            })
+            return SEO_PAGE_DATA.getMetas()
         }
     }
 </script>
