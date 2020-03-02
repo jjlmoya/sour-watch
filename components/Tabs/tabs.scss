@@ -1,24 +1,29 @@
 .tabs {
   display: grid;
   width: 100%;
+  padding: 0 20px;
 
   &__navigation {
     display: flex;
-    border-bottom: 1px solid black;
     margin: 10px 0;
 
     &-element {
-      text-transform: capitalize;
       padding: 5px 10px;
+      margin: 0 2px;
       font-size: var(--font-size-xs);
+      border-bottom: 2px solid var(--color-primary);
+      opacity: 0.5;
+      text-transform: uppercase;
+      cursor: pointer;
 
       &.is-active {
-        border-bottom: 1px solid black;
+        border-bottom: 2px solid var(--color-primary-light);
+        opacity: 1;
       }
     }
   }
 
-  &__contents {
-    margin: 0 auto;
+  &__content {
+    padding: 0 10px;
   }
 }

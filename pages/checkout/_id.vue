@@ -30,37 +30,12 @@
                                 :placeholder="'Confirmar Email'"
                             />
                         </Form>
-                        <Form :title="'Datos de Pago'">
-                            <Tabs />
-                            <Input
-                                :label="'Nombre:'"
-                                :type="'text'"
-                                :modifier="'name'"
-                                :placeholder="'Nombre'"
-                            />
-                            <Input
-                                :label="'Teléfono:'"
-                                :type="'phone'"
-                                :modifier="'phone'"
-                                :placeholder="'Teléfono'"
-                            />
-                            <Input
-                                :label="'Email:'"
-                                :type="'email'"
-                                :modifier="'email'"
-                                :placeholder="'Email'"
-                            />
-                            <Input
-                                :label="'Confirmar Email:'"
-                                :type="'email'"
-                                :modifier="'email'"
-                                :placeholder="'Confirmar Email'"
-                            />
-                        </Form>
+                        <Delivery />
+                        <Payment />
                     </form>
                 </template>
                 <template slot="right">
-                    Test {{ product }}
+                    Test
                 </template>
             </Double>
         </Layout>
@@ -76,7 +51,8 @@
     import Double from '@/layouts/Double.vue'
     import Form from '@/components/Forms/Form.vue'
     import Input from '@/components/Forms/Input.vue'
-    import Tabs from '@/components/Tabs/Default.vue'
+    import Payment from '@/components/Forms/Payment.vue'
+    import Delivery from '@/components/Forms/Delivery.vue'
     import CurrencyService from '@/services/currency.service'
     import SeoService from '@/services/seo.service'
 
@@ -89,7 +65,8 @@
             Double,
             Form,
             Input,
-            Tabs
+            Payment,
+            Delivery
         },
         validate ({ params }) {
             return !!params.id
